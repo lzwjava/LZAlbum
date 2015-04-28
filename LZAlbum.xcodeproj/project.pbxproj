@@ -57,11 +57,11 @@
 		700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08981AF008D000A14D93 /* XHViewState.m */; };
 		700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089A1AF008D000A14D93 /* XHZoomingImageView.m */; };
 		700C08CE1AF008D000A14D93 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */; };
-		A0AF1C0296854C0FF0349A2A /* libPods-MCAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD9C10FE9DC0910ADAD3503 /* Pods-LZAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		700C08411AF008D000A14D93 /* LZAlbumCreateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCreateVC.h; sourceTree = "<group>"; };
 		700C08421AF008D000A14D93 /* LZAlbumCreateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCreateVC.m; sourceTree = "<group>"; };
 		700C08431AF008D000A14D93 /* LZAlbumCreateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZAlbumCreateVC.xib; sourceTree = "<group>"; };
@@ -144,8 +144,7 @@
 		700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80ACA871095105E2C061670D /* Pods-MCAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCAlbum/Pods-MCAlbum.debug.xcconfig"; sourceTree = "<group>"; };
-		EE9910D5E01A877F8CE4680D /* Pods-MCAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCAlbum/Pods-MCAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		8F9D5B0AB9E7AADF7534422E /* Pods-LZAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0AF1C0296854C0FF0349A2A /* libPods-MCAlbum.a in Frameworks */,
 				3FF40895072CD95F00B7141D /* libPods-LZAlbum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,8 +380,8 @@
 		B336D24C107235B00692E160 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				80ACA871095105E2C061670D /* Pods-MCAlbum.debug.xcconfig */,
-				EE9910D5E01A877F8CE4680D /* Pods-MCAlbum.release.xcconfig */,
+				8F9D5B0AB9E7AADF7534422E /* Pods-LZAlbum.debug.xcconfig */,
+				1FD9C10FE9DC0910ADAD3503 /* Pods-LZAlbum.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -638,7 +636,7 @@
 		};
 		70EBDCEC1AEFCDE5005EABEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80ACA871095105E2C061670D /* Pods-MCAlbum.debug.xcconfig */;
+			baseConfigurationReference = 8F9D5B0AB9E7AADF7534422E /* Pods-LZAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LZAlbum/Info.plist;
@@ -650,7 +648,7 @@
 		};
 		70EBDCED1AEFCDE5005EABEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE9910D5E01A877F8CE4680D /* Pods-MCAlbum.release.xcconfig */;
+			baseConfigurationReference = 1FD9C10FE9DC0910ADAD3503 /* Pods-LZAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LZAlbum/Info.plist;
