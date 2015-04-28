@@ -7,7 +7,7 @@
 //
 
 #import <AVOSCloud/AVOSCloud.h>
-#import "MCAVObjectHeader.h"
+#import "LZAVObjectHeader.h"
 
 #define KEY_CLS @"cls"
 #define KEY_ALBUM_TYPE @"albumType"

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MCCommon.h"
+#import "LZCommon.h"
 
 #define KEY_USERNAME @"username"
 #define KEY_AVATAR @"avatar"

@@ -8,9 +8,9 @@
 
 #import "AppDelegate.h"
 #import "LCAlbum.h"
-#import "MCComment.h"
-#import "MCEntryFormController.h"
-#import "MCAlbumVC.h"
+#import "LZComment.h"
+#import "LZEntryFormController.h"
+#import "LZAlbumVC.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [LCAlbum registerSubclass];
-    [MCComment registerSubclass];
+    [LZComment registerSubclass];
     [AVOSCloud setApplicationId:@"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e" clientKey:@"j9de7xoza1gbvkbp0b6qudz10s9lkwsxqll2nvwrjfty3a58"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
@@ -47,16 +47,16 @@
     [self.window makeKeyAndVisible];
     UIViewController* nextVC;
     if([AVUser currentUser]){
-        nextVC=[[MCAlbumVC alloc] init];
+        nextVC=[[LZAlbumVC alloc] init];
     }else{
-        nextVC=[[MCEntryFormController alloc] init];
+        nextVC=[[LZEntryFormController alloc] init];
     }
     self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:nextVC];
     return YES;
 }
 
 -(void)toMain{
-    MCAlbumVC* vc=[[MCAlbumVC alloc] init];
+    LZAlbumVC* vc=[[LZAlbumVC alloc] init];
     self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:vc];
 }
 
