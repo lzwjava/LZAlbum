@@ -22,6 +22,7 @@
 		700C08361AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082C1AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png */; };
 		700C08371AEFFAEA00A14D93 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082D1AEFFAEA00A14D93 /* AlbumOperateMore@2x.png */; };
 		700C08381AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082E1AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png */; };
+		700C083E1AF0084E00A14D93 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C083D1AF0084E00A14D93 /* XHPhotographyHelper.m */; };
 		70EBDCCE1AEFCDE5005EABEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDCCD1AEFCDE5005EABEF /* main.m */; };
 		70EBDCD91AEFCDE5005EABEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDCD81AEFCDE5005EABEF /* Images.xcassets */; };
 		70EBDCDC1AEFCDE5005EABEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDCDA1AEFCDE5005EABEF /* LaunchScreen.xib */; };
@@ -42,7 +43,6 @@
 		70EBDD461AEFD1DA005EABEF /* LZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD451AEFD1DA005EABEF /* LZBaseVC.m */; };
 		70EBDD491AEFD1EF005EABEF /* LZBaseTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD481AEFD1EF005EABEF /* LZBaseTC.m */; };
 		70EBDD4D1AEFD208005EABEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD4C1AEFD208005EABEF /* AppDelegate.m */; };
-		70EBDD531AEFD410005EABEF /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD521AEFD410005EABEF /* XHPhotographyHelper.m */; };
 		70EBDD681AEFD5D4005EABEF /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD561AEFD5D4005EABEF /* circle.png */; };
 		70EBDD691AEFD5D4005EABEF /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD571AEFD5D4005EABEF /* circle@2x.png */; };
 		70EBDD6A1AEFD5D4005EABEF /* meicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD581AEFD5D4005EABEF /* meicon.png */; };
@@ -79,6 +79,8 @@
 		700C082C1AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumInformationLikeHL@3x.png"; sourceTree = "<group>"; };
 		700C082D1AEFFAEA00A14D93 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		700C082E1AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
+		700C083C1AF0084E00A14D93 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
+		700C083D1AF0084E00A14D93 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
 		706F24F01AEFE44600C80893 /* LZAVObjectHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZAVObjectHeader.h; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EBDCCC1AEFCDE5005EABEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,8 +122,6 @@
 		70EBDD4C1AEFD208005EABEF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		70EBDD4E1AEFD235005EABEF /* LZCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZCommon.h; sourceTree = "<group>"; };
 		70EBDD4F1AEFD235005EABEF /* LZMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZMacros.h; sourceTree = "<group>"; };
-		70EBDD511AEFD410005EABEF /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
-		70EBDD521AEFD410005EABEF /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
 		70EBDD561AEFD5D4005EABEF /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		70EBDD571AEFD5D4005EABEF /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
 		70EBDD581AEFD5D4005EABEF /* meicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meicon.png; sourceTree = "<group>"; };
@@ -194,6 +194,15 @@
 				700C082E1AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		700C083B1AF0084E00A14D93 /* XHPhotographyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				700C083C1AF0084E00A14D93 /* XHPhotographyHelper.h */,
+				700C083D1AF0084E00A14D93 /* XHPhotographyHelper.m */,
+			);
+			path = XHPhotographyHelper;
 			sourceTree = "<group>";
 		};
 		70EBDCBF1AEFCDE5005EABEF = {
@@ -328,10 +337,9 @@
 		70EBDD501AEFD3F6005EABEF /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				700C083B1AF0084E00A14D93 /* XHPhotographyHelper */,
 				70EBDD541AEFD5D4005EABEF /* PathCover */,
 				70EBDD611AEFD5D4005EABEF /* XHImageViewer */,
-				70EBDD511AEFD410005EABEF /* XHPhotographyHelper.h */,
-				70EBDD521AEFD410005EABEF /* XHPhotographyHelper.m */,
 			);
 			path = vendor;
 			sourceTree = "<group>";
@@ -510,10 +518,10 @@
 				70EBDCF91AEFCE2D005EABEF /* LZAlbumVC.m in Sources */,
 				70EBDD3E1AEFCFC5005EABEF /* LZAlbum.m in Sources */,
 				700C081E1AEFED4400A14D93 /* LZLoginForm.m in Sources */,
+				700C083E1AF0084E00A14D93 /* XHPhotographyHelper.m in Sources */,
 				70EBDD6D1AEFD5D4005EABEF /* XHPathCover.m in Sources */,
 				70EBDCF71AEFCE2D005EABEF /* LZAlbumCreateVC.m in Sources */,
 				70EBDD711AEFD5D4005EABEF /* XHViewState.m in Sources */,
-				70EBDD531AEFD410005EABEF /* XHPhotographyHelper.m in Sources */,
 				70EBDD461AEFD1DA005EABEF /* LZBaseVC.m in Sources */,
 				70EBDD2F1AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.m in Sources */,
 				70EBDD431AEFCFE0005EABEF /* LZAlbumManager.m in Sources */,
