@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MCAlbumCreateVC">
+            <connections>
+                <outlet property="contentTextField" destination="nPt-wu-dJx" id="JBk-Ck-1Hg"/>
+                <outlet property="photoCollectionView" destination="bOy-0L-s4S" id="SQP-ew-Duk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="说点什么" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPt-wu-dJx">
+                    <rect key="frame" x="15" y="100" width="290" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Vc9-Jw-j0l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-0L-s4S">
+                    <rect key="frame" x="15" y="208" width="290" height="118"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="118" id="hpD-uH-Ekb"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6aQ-F1-etr">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="k1Z-QW-26z"/>
+                        <outlet property="delegate" destination="-1" id="heE-Ws-Jyv"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bOy-0L-s4S" secondAttribute="trailing" constant="15" id="5mM-Nt-ioj"/>
+                <constraint firstItem="nPt-wu-dJx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Kb5-pe-noE"/>
+                <constraint firstItem="bOy-0L-s4S" firstAttribute="top" secondItem="nPt-wu-dJx" secondAttribute="bottom" constant="8" id="eG3-Ez-VHy"/>
+                <constraint firstItem="bOy-0L-s4S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="gR7-o7-san"/>
+                <constraint firstAttribute="trailing" secondItem="nPt-wu-dJx" secondAttribute="trailing" constant="15" id="jVQ-hi-7Au"/>
+                <constraint firstItem="nPt-wu-dJx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="w4K-NC-VxB"/>
+            </constraints>
+            <point key="canvasLocation" x="649" y="388"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
