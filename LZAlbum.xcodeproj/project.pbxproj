@@ -7,140 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		700C08151AEFEB3200A14D93 /* LZEntryFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08141AEFEB3200A14D93 /* LZEntryFormController.m */; };
-		700C081D1AEFED4400A14D93 /* LZEntryForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08181AEFED4400A14D93 /* LZEntryForm.m */; };
-		700C081E1AEFED4400A14D93 /* LZLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C081A1AEFED4400A14D93 /* LZLoginForm.m */; };
-		700C081F1AEFED4400A14D93 /* LZRegisterForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C081C1AEFED4400A14D93 /* LZRegisterForm.m */; };
-		700C08241AEFFA5300A14D93 /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08231AEFFA5300A14D93 /* album_add_photo@2x.png */; };
-		700C082F1AEFFAEA00A14D93 /* Album_like_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08251AEFFAEA00A14D93 /* Album_like_icon@2x.png */; };
-		700C08301AEFFAEA00A14D93 /* Album_likes_comments_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08261AEFFAEA00A14D93 /* Album_likes_comments_background@2x.png */; };
-		700C08311AEFFAEA00A14D93 /* AlbumAddBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08271AEFFAEA00A14D93 /* AlbumAddBtn@2x.png */; };
-		700C08321AEFFAEA00A14D93 /* AlbumAddBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08281AEFFAEA00A14D93 /* AlbumAddBtnHL@2x.png */; };
-		700C08331AEFFAEA00A14D93 /* AlbumFlagMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08291AEFFAEA00A14D93 /* AlbumFlagMark@2x.png */; };
-		700C08341AEFFAEA00A14D93 /* AlbumHeaderBackgrounImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082A1AEFFAEA00A14D93 /* AlbumHeaderBackgrounImage@2x.png */; };
-		700C08351AEFFAEA00A14D93 /* AlbumInformationLikeHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082B1AEFFAEA00A14D93 /* AlbumInformationLikeHL@2x.png */; };
-		700C08361AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082C1AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png */; };
-		700C08371AEFFAEA00A14D93 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082D1AEFFAEA00A14D93 /* AlbumOperateMore@2x.png */; };
-		700C08381AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C082E1AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png */; };
-		700C083E1AF0084E00A14D93 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C083D1AF0084E00A14D93 /* XHPhotographyHelper.m */; };
-		70EBDCCE1AEFCDE5005EABEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDCCD1AEFCDE5005EABEF /* main.m */; };
-		70EBDCD91AEFCDE5005EABEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDCD81AEFCDE5005EABEF /* Images.xcassets */; };
-		70EBDCDC1AEFCDE5005EABEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDCDA1AEFCDE5005EABEF /* LaunchScreen.xib */; };
-		70EBDCF71AEFCE2D005EABEF /* LZAlbumCreateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDCF31AEFCE2D005EABEF /* LZAlbumCreateVC.m */; };
-		70EBDCF81AEFCE2D005EABEF /* LZAlbumCreateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDCF41AEFCE2D005EABEF /* LZAlbumCreateVC.xib */; };
-		70EBDCF91AEFCE2D005EABEF /* LZAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDCF61AEFCE2D005EABEF /* LZAlbumVC.m */; };
-		70EBDD2F1AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD211AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.m */; };
-		70EBDD301AEFCFBF005EABEF /* LZAlbumLikesCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD231AEFCFBF005EABEF /* LZAlbumLikesCommentsView.m */; };
-		70EBDD311AEFCFBF005EABEF /* LZAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD251AEFCFBF005EABEF /* LZAlbumOperationView.m */; };
-		70EBDD321AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD271AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.m */; };
-		70EBDD331AEFCFBF005EABEF /* LZAlbumReplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD291AEFCFBF005EABEF /* LZAlbumReplyView.m */; };
-		70EBDD341AEFCFBF005EABEF /* LZAlbumRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD2B1AEFCFBF005EABEF /* LZAlbumRichTextView.m */; };
-		70EBDD351AEFCFBF005EABEF /* LZAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD2D1AEFCFBF005EABEF /* LZAlbumTableViewCell.m */; };
-		70EBDD3D1AEFCFC5005EABEF /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD381AEFCFC5005EABEF /* LCAlbum.m */; };
-		70EBDD3E1AEFCFC5005EABEF /* LZAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD3A1AEFCFC5005EABEF /* LZAlbum.m */; };
-		70EBDD3F1AEFCFC5005EABEF /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD3C1AEFCFC5005EABEF /* LZComment.m */; };
-		70EBDD431AEFCFE0005EABEF /* LZAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD421AEFCFE0005EABEF /* LZAlbumManager.m */; };
-		70EBDD461AEFD1DA005EABEF /* LZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD451AEFD1DA005EABEF /* LZBaseVC.m */; };
-		70EBDD491AEFD1EF005EABEF /* LZBaseTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD481AEFD1EF005EABEF /* LZBaseTC.m */; };
-		70EBDD4D1AEFD208005EABEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD4C1AEFD208005EABEF /* AppDelegate.m */; };
-		70EBDD681AEFD5D4005EABEF /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD561AEFD5D4005EABEF /* circle.png */; };
-		70EBDD691AEFD5D4005EABEF /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD571AEFD5D4005EABEF /* circle@2x.png */; };
-		70EBDD6A1AEFD5D4005EABEF /* meicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD581AEFD5D4005EABEF /* meicon.png */; };
-		70EBDD6B1AEFD5D4005EABEF /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD591AEFD5D4005EABEF /* MenuBackground@2x.png */; };
-		70EBDD6C1AEFD5D4005EABEF /* pullrefresh.aif in Resources */ = {isa = PBXBuildFile; fileRef = 70EBDD5A1AEFD5D4005EABEF /* pullrefresh.aif */; };
-		70EBDD6D1AEFD5D4005EABEF /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD5C1AEFD5D4005EABEF /* XHPathCover.m */; };
-		70EBDD6E1AEFD5D4005EABEF /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD5E1AEFD5D4005EABEF /* XHSoundManager.m */; };
-		70EBDD6F1AEFD5D4005EABEF /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD601AEFD5D4005EABEF /* XHWaterDropRefresh.m */; };
-		70EBDD701AEFD5D4005EABEF /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD631AEFD5D4005EABEF /* XHImageViewer.m */; };
-		70EBDD711AEFD5D4005EABEF /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD651AEFD5D4005EABEF /* XHViewState.m */; };
-		70EBDD721AEFD5D4005EABEF /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD671AEFD5D4005EABEF /* XHZoomingImageView.m */; };
-		70EBDD751AEFD7D6005EABEF /* AVUser+MCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDD741AEFD7D6005EABEF /* AVUser+MCCustomUser.m */; };
+		3FF40895072CD95F00B7141D /* libPods-LZAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */; };
+		700C089E1AF008D000A14D93 /* LZAlbumCreateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08421AF008D000A14D93 /* LZAlbumCreateVC.m */; };
+		700C089F1AF008D000A14D93 /* LZAlbumCreateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 700C08431AF008D000A14D93 /* LZAlbumCreateVC.xib */; };
+		700C08A01AF008D000A14D93 /* LZAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08451AF008D000A14D93 /* LZAlbumVC.m */; };
+		700C08A11AF008D000A14D93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08481AF008D000A14D93 /* AppDelegate.m */; };
+		700C08A21AF008D000A14D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 700C084B1AF008D000A14D93 /* LaunchScreen.xib */; };
+		700C08A31AF008D000A14D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700C084D1AF008D000A14D93 /* Images.xcassets */; };
+		700C08A41AF008D000A14D93 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 700C084E1AF008D000A14D93 /* Info.plist */; };
+		700C08A51AF008D000A14D93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C084F1AF008D000A14D93 /* main.m */; };
+		700C08A61AF008D000A14D93 /* LZAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08521AF008D000A14D93 /* LZAlbumManager.m */; };
+		700C08A71AF008D000A14D93 /* AVUser+MCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08551AF008D000A14D93 /* AVUser+MCCustomUser.m */; };
+		700C08A81AF008D000A14D93 /* LZEntryForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08581AF008D000A14D93 /* LZEntryForm.m */; };
+		700C08A91AF008D000A14D93 /* LZLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C085A1AF008D000A14D93 /* LZLoginForm.m */; };
+		700C08AA1AF008D000A14D93 /* LZRegisterForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C085C1AF008D000A14D93 /* LZRegisterForm.m */; };
+		700C08AB1AF008D000A14D93 /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C085E1AF008D000A14D93 /* LCAlbum.m */; };
+		700C08AC1AF008D000A14D93 /* LZAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08601AF008D000A14D93 /* LZAlbum.m */; };
+		700C08AD1AF008D000A14D93 /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08631AF008D000A14D93 /* LZComment.m */; };
+		700C08AE1AF008D000A14D93 /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08651AF008D000A14D93 /* album_add_photo@2x.png */; };
+		700C08AF1AF008D000A14D93 /* Album_like_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08661AF008D000A14D93 /* Album_like_icon@2x.png */; };
+		700C08B01AF008D000A14D93 /* Album_likes_comments_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08671AF008D000A14D93 /* Album_likes_comments_background@2x.png */; };
+		700C08B11AF008D000A14D93 /* AlbumAddBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08681AF008D000A14D93 /* AlbumAddBtn@2x.png */; };
+		700C08B21AF008D000A14D93 /* AlbumAddBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08691AF008D000A14D93 /* AlbumAddBtnHL@2x.png */; };
+		700C08B31AF008D000A14D93 /* AlbumFlagMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C086A1AF008D000A14D93 /* AlbumFlagMark@2x.png */; };
+		700C08B41AF008D000A14D93 /* AlbumHeaderBackgrounImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C086B1AF008D000A14D93 /* AlbumHeaderBackgrounImage@2x.png */; };
+		700C08B51AF008D000A14D93 /* AlbumInformationLikeHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C086C1AF008D000A14D93 /* AlbumInformationLikeHL@2x.png */; };
+		700C08B61AF008D000A14D93 /* AlbumInformationLikeHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C086D1AF008D000A14D93 /* AlbumInformationLikeHL@3x.png */; };
+		700C08B71AF008D000A14D93 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C086E1AF008D000A14D93 /* AlbumOperateMore@2x.png */; };
+		700C08B81AF008D000A14D93 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C086F1AF008D000A14D93 /* AlbumOperateMoreHL@2x.png */; };
+		700C08B91AF008D000A14D93 /* LZBaseTC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08721AF008D000A14D93 /* LZBaseTC.m */; };
+		700C08BA1AF008D000A14D93 /* LZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08741AF008D000A14D93 /* LZBaseVC.m */; };
+		700C08BB1AF008D000A14D93 /* LZEntryFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08761AF008D000A14D93 /* LZEntryFormController.m */; };
+		700C08BC1AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08791AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m */; };
+		700C08BD1AF008D000A14D93 /* LZAlbumLikesCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C087B1AF008D000A14D93 /* LZAlbumLikesCommentsView.m */; };
+		700C08BE1AF008D000A14D93 /* LZAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C087D1AF008D000A14D93 /* LZAlbumOperationView.m */; };
+		700C08BF1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C087F1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.m */; };
+		700C08C01AF008D000A14D93 /* LZAlbumReplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08811AF008D000A14D93 /* LZAlbumReplyView.m */; };
+		700C08C11AF008D000A14D93 /* LZAlbumRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08831AF008D000A14D93 /* LZAlbumRichTextView.m */; };
+		700C08C21AF008D000A14D93 /* LZAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08851AF008D000A14D93 /* LZAlbumTableViewCell.m */; };
+		700C08C31AF008D000A14D93 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08891AF008D000A14D93 /* circle.png */; };
+		700C08C41AF008D000A14D93 /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C088A1AF008D000A14D93 /* circle@2x.png */; };
+		700C08C51AF008D000A14D93 /* meicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C088B1AF008D000A14D93 /* meicon.png */; };
+		700C08C61AF008D000A14D93 /* MenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C088C1AF008D000A14D93 /* MenuBackground@2x.png */; };
+		700C08C71AF008D000A14D93 /* pullrefresh.aif in Resources */ = {isa = PBXBuildFile; fileRef = 700C088D1AF008D000A14D93 /* pullrefresh.aif */; };
+		700C08C81AF008D000A14D93 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C088F1AF008D000A14D93 /* XHPathCover.m */; };
+		700C08C91AF008D000A14D93 /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08911AF008D000A14D93 /* XHSoundManager.m */; };
+		700C08CA1AF008D000A14D93 /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08931AF008D000A14D93 /* XHWaterDropRefresh.m */; };
+		700C08CB1AF008D000A14D93 /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08961AF008D000A14D93 /* XHImageViewer.m */; };
+		700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08981AF008D000A14D93 /* XHViewState.m */; };
+		700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089A1AF008D000A14D93 /* XHZoomingImageView.m */; };
+		700C08CE1AF008D000A14D93 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */; };
 		A0AF1C0296854C0FF0349A2A /* libPods-MCAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		700C08131AEFEB3200A14D93 /* LZEntryFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZEntryFormController.h; sourceTree = "<group>"; };
-		700C08141AEFEB3200A14D93 /* LZEntryFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZEntryFormController.m; sourceTree = "<group>"; };
-		700C08171AEFED4400A14D93 /* LZEntryForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZEntryForm.h; sourceTree = "<group>"; };
-		700C08181AEFED4400A14D93 /* LZEntryForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZEntryForm.m; sourceTree = "<group>"; };
-		700C08191AEFED4400A14D93 /* LZLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginForm.h; sourceTree = "<group>"; };
-		700C081A1AEFED4400A14D93 /* LZLoginForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginForm.m; sourceTree = "<group>"; };
-		700C081B1AEFED4400A14D93 /* LZRegisterForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterForm.h; sourceTree = "<group>"; };
-		700C081C1AEFED4400A14D93 /* LZRegisterForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterForm.m; sourceTree = "<group>"; };
-		700C08231AEFFA5300A14D93 /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
-		700C08251AEFFAEA00A14D93 /* Album_like_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_like_icon@2x.png"; sourceTree = "<group>"; };
-		700C08261AEFFAEA00A14D93 /* Album_likes_comments_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_likes_comments_background@2x.png"; sourceTree = "<group>"; };
-		700C08271AEFFAEA00A14D93 /* AlbumAddBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumAddBtn@2x.png"; sourceTree = "<group>"; };
-		700C08281AEFFAEA00A14D93 /* AlbumAddBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumAddBtnHL@2x.png"; sourceTree = "<group>"; };
-		700C08291AEFFAEA00A14D93 /* AlbumFlagMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumFlagMark@2x.png"; sourceTree = "<group>"; };
-		700C082A1AEFFAEA00A14D93 /* AlbumHeaderBackgrounImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumHeaderBackgrounImage@2x.png"; sourceTree = "<group>"; };
-		700C082B1AEFFAEA00A14D93 /* AlbumInformationLikeHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumInformationLikeHL@2x.png"; sourceTree = "<group>"; };
-		700C082C1AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumInformationLikeHL@3x.png"; sourceTree = "<group>"; };
-		700C082D1AEFFAEA00A14D93 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
-		700C082E1AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
-		700C083C1AF0084E00A14D93 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
-		700C083D1AF0084E00A14D93 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
-		706F24F01AEFE44600C80893 /* LZAVObjectHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZAVObjectHeader.h; sourceTree = "<group>"; };
+		700C08411AF008D000A14D93 /* LZAlbumCreateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCreateVC.h; sourceTree = "<group>"; };
+		700C08421AF008D000A14D93 /* LZAlbumCreateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCreateVC.m; sourceTree = "<group>"; };
+		700C08431AF008D000A14D93 /* LZAlbumCreateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZAlbumCreateVC.xib; sourceTree = "<group>"; };
+		700C08441AF008D000A14D93 /* LZAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumVC.h; sourceTree = "<group>"; };
+		700C08451AF008D000A14D93 /* LZAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumVC.m; sourceTree = "<group>"; };
+		700C08471AF008D000A14D93 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		700C08481AF008D000A14D93 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		700C08491AF008D000A14D93 /* LZCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCommon.h; sourceTree = "<group>"; };
+		700C084A1AF008D000A14D93 /* LZMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMacros.h; sourceTree = "<group>"; };
+		700C084C1AF008D000A14D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		700C084D1AF008D000A14D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		700C084E1AF008D000A14D93 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700C084F1AF008D000A14D93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		700C08511AF008D000A14D93 /* LZAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumManager.h; sourceTree = "<group>"; };
+		700C08521AF008D000A14D93 /* LZAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumManager.m; sourceTree = "<group>"; };
+		700C08541AF008D000A14D93 /* AVUser+MCCustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+MCCustomUser.h"; sourceTree = "<group>"; };
+		700C08551AF008D000A14D93 /* AVUser+MCCustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+MCCustomUser.m"; sourceTree = "<group>"; };
+		700C08571AF008D000A14D93 /* LZEntryForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZEntryForm.h; sourceTree = "<group>"; };
+		700C08581AF008D000A14D93 /* LZEntryForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZEntryForm.m; sourceTree = "<group>"; };
+		700C08591AF008D000A14D93 /* LZLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginForm.h; sourceTree = "<group>"; };
+		700C085A1AF008D000A14D93 /* LZLoginForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginForm.m; sourceTree = "<group>"; };
+		700C085B1AF008D000A14D93 /* LZRegisterForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterForm.h; sourceTree = "<group>"; };
+		700C085C1AF008D000A14D93 /* LZRegisterForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterForm.m; sourceTree = "<group>"; };
+		700C085D1AF008D000A14D93 /* LCAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAlbum.h; sourceTree = "<group>"; };
+		700C085E1AF008D000A14D93 /* LCAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAlbum.m; sourceTree = "<group>"; };
+		700C085F1AF008D000A14D93 /* LZAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbum.h; sourceTree = "<group>"; };
+		700C08601AF008D000A14D93 /* LZAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbum.m; sourceTree = "<group>"; };
+		700C08611AF008D000A14D93 /* LZAVObjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAVObjectHeader.h; sourceTree = "<group>"; };
+		700C08621AF008D000A14D93 /* LZComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZComment.h; sourceTree = "<group>"; };
+		700C08631AF008D000A14D93 /* LZComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZComment.m; sourceTree = "<group>"; };
+		700C08651AF008D000A14D93 /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
+		700C08661AF008D000A14D93 /* Album_like_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_like_icon@2x.png"; sourceTree = "<group>"; };
+		700C08671AF008D000A14D93 /* Album_likes_comments_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_likes_comments_background@2x.png"; sourceTree = "<group>"; };
+		700C08681AF008D000A14D93 /* AlbumAddBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumAddBtn@2x.png"; sourceTree = "<group>"; };
+		700C08691AF008D000A14D93 /* AlbumAddBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumAddBtnHL@2x.png"; sourceTree = "<group>"; };
+		700C086A1AF008D000A14D93 /* AlbumFlagMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumFlagMark@2x.png"; sourceTree = "<group>"; };
+		700C086B1AF008D000A14D93 /* AlbumHeaderBackgrounImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumHeaderBackgrounImage@2x.png"; sourceTree = "<group>"; };
+		700C086C1AF008D000A14D93 /* AlbumInformationLikeHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumInformationLikeHL@2x.png"; sourceTree = "<group>"; };
+		700C086D1AF008D000A14D93 /* AlbumInformationLikeHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumInformationLikeHL@3x.png"; sourceTree = "<group>"; };
+		700C086E1AF008D000A14D93 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
+		700C086F1AF008D000A14D93 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
+		700C08711AF008D000A14D93 /* LZBaseTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseTC.h; sourceTree = "<group>"; };
+		700C08721AF008D000A14D93 /* LZBaseTC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseTC.m; sourceTree = "<group>"; };
+		700C08731AF008D000A14D93 /* LZBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseVC.h; sourceTree = "<group>"; };
+		700C08741AF008D000A14D93 /* LZBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseVC.m; sourceTree = "<group>"; };
+		700C08751AF008D000A14D93 /* LZEntryFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZEntryFormController.h; sourceTree = "<group>"; };
+		700C08761AF008D000A14D93 /* LZEntryFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZEntryFormController.m; sourceTree = "<group>"; };
+		700C08781AF008D000A14D93 /* LZAlbumCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCollectionFlowLayout.h; sourceTree = "<group>"; };
+		700C08791AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCollectionFlowLayout.m; sourceTree = "<group>"; };
+		700C087A1AF008D000A14D93 /* LZAlbumLikesCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumLikesCommentsView.h; sourceTree = "<group>"; };
+		700C087B1AF008D000A14D93 /* LZAlbumLikesCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumLikesCommentsView.m; sourceTree = "<group>"; };
+		700C087C1AF008D000A14D93 /* LZAlbumOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumOperationView.h; sourceTree = "<group>"; };
+		700C087D1AF008D000A14D93 /* LZAlbumOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumOperationView.m; sourceTree = "<group>"; };
+		700C087E1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		700C087F1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		700C08801AF008D000A14D93 /* LZAlbumReplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumReplyView.h; sourceTree = "<group>"; };
+		700C08811AF008D000A14D93 /* LZAlbumReplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumReplyView.m; sourceTree = "<group>"; };
+		700C08821AF008D000A14D93 /* LZAlbumRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumRichTextView.h; sourceTree = "<group>"; };
+		700C08831AF008D000A14D93 /* LZAlbumRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumRichTextView.m; sourceTree = "<group>"; };
+		700C08841AF008D000A14D93 /* LZAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumTableViewCell.h; sourceTree = "<group>"; };
+		700C08851AF008D000A14D93 /* LZAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumTableViewCell.m; sourceTree = "<group>"; };
+		700C08891AF008D000A14D93 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		700C088A1AF008D000A14D93 /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
+		700C088B1AF008D000A14D93 /* meicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meicon.png; sourceTree = "<group>"; };
+		700C088C1AF008D000A14D93 /* MenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuBackground@2x.png"; sourceTree = "<group>"; };
+		700C088D1AF008D000A14D93 /* pullrefresh.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = pullrefresh.aif; sourceTree = "<group>"; };
+		700C088E1AF008D000A14D93 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
+		700C088F1AF008D000A14D93 /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
+		700C08901AF008D000A14D93 /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
+		700C08911AF008D000A14D93 /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
+		700C08921AF008D000A14D93 /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
+		700C08931AF008D000A14D93 /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
+		700C08951AF008D000A14D93 /* XHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageViewer.h; sourceTree = "<group>"; };
+		700C08961AF008D000A14D93 /* XHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageViewer.m; sourceTree = "<group>"; };
+		700C08971AF008D000A14D93 /* XHViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewState.h; sourceTree = "<group>"; };
+		700C08981AF008D000A14D93 /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
+		700C08991AF008D000A14D93 /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
+		700C089A1AF008D000A14D93 /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
+		700C089C1AF008D000A14D93 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
+		700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		70EBDCCC1AEFCDE5005EABEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70EBDCCD1AEFCDE5005EABEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		70EBDCD81AEFCDE5005EABEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		70EBDCDB1AEFCDE5005EABEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		70EBDCF21AEFCE2D005EABEF /* LZAlbumCreateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCreateVC.h; sourceTree = "<group>"; };
-		70EBDCF31AEFCE2D005EABEF /* LZAlbumCreateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCreateVC.m; sourceTree = "<group>"; };
-		70EBDCF41AEFCE2D005EABEF /* LZAlbumCreateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZAlbumCreateVC.xib; sourceTree = "<group>"; };
-		70EBDCF51AEFCE2D005EABEF /* LZAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumVC.h; sourceTree = "<group>"; };
-		70EBDCF61AEFCE2D005EABEF /* LZAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumVC.m; sourceTree = "<group>"; };
-		70EBDD201AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCollectionFlowLayout.h; sourceTree = "<group>"; };
-		70EBDD211AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCollectionFlowLayout.m; sourceTree = "<group>"; };
-		70EBDD221AEFCFBF005EABEF /* LZAlbumLikesCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumLikesCommentsView.h; sourceTree = "<group>"; };
-		70EBDD231AEFCFBF005EABEF /* LZAlbumLikesCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumLikesCommentsView.m; sourceTree = "<group>"; };
-		70EBDD241AEFCFBF005EABEF /* LZAlbumOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumOperationView.h; sourceTree = "<group>"; };
-		70EBDD251AEFCFBF005EABEF /* LZAlbumOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumOperationView.m; sourceTree = "<group>"; };
-		70EBDD261AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
-		70EBDD271AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
-		70EBDD281AEFCFBF005EABEF /* LZAlbumReplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumReplyView.h; sourceTree = "<group>"; };
-		70EBDD291AEFCFBF005EABEF /* LZAlbumReplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumReplyView.m; sourceTree = "<group>"; };
-		70EBDD2A1AEFCFBF005EABEF /* LZAlbumRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumRichTextView.h; sourceTree = "<group>"; };
-		70EBDD2B1AEFCFBF005EABEF /* LZAlbumRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumRichTextView.m; sourceTree = "<group>"; };
-		70EBDD2C1AEFCFBF005EABEF /* LZAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumTableViewCell.h; sourceTree = "<group>"; };
-		70EBDD2D1AEFCFBF005EABEF /* LZAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumTableViewCell.m; sourceTree = "<group>"; };
-		70EBDD371AEFCFC5005EABEF /* LCAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAlbum.h; sourceTree = "<group>"; };
-		70EBDD381AEFCFC5005EABEF /* LCAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAlbum.m; sourceTree = "<group>"; };
-		70EBDD391AEFCFC5005EABEF /* LZAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbum.h; sourceTree = "<group>"; };
-		70EBDD3A1AEFCFC5005EABEF /* LZAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbum.m; sourceTree = "<group>"; };
-		70EBDD3B1AEFCFC5005EABEF /* LZComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZComment.h; sourceTree = "<group>"; };
-		70EBDD3C1AEFCFC5005EABEF /* LZComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZComment.m; sourceTree = "<group>"; };
-		70EBDD411AEFCFE0005EABEF /* LZAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumManager.h; sourceTree = "<group>"; };
-		70EBDD421AEFCFE0005EABEF /* LZAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumManager.m; sourceTree = "<group>"; };
-		70EBDD441AEFD1DA005EABEF /* LZBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseVC.h; sourceTree = "<group>"; };
-		70EBDD451AEFD1DA005EABEF /* LZBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseVC.m; sourceTree = "<group>"; };
-		70EBDD471AEFD1EF005EABEF /* LZBaseTC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseTC.h; sourceTree = "<group>"; };
-		70EBDD481AEFD1EF005EABEF /* LZBaseTC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseTC.m; sourceTree = "<group>"; };
-		70EBDD4B1AEFD208005EABEF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		70EBDD4C1AEFD208005EABEF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		70EBDD4E1AEFD235005EABEF /* LZCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZCommon.h; sourceTree = "<group>"; };
-		70EBDD4F1AEFD235005EABEF /* LZMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZMacros.h; sourceTree = "<group>"; };
-		70EBDD561AEFD5D4005EABEF /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
-		70EBDD571AEFD5D4005EABEF /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
-		70EBDD581AEFD5D4005EABEF /* meicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meicon.png; sourceTree = "<group>"; };
-		70EBDD591AEFD5D4005EABEF /* MenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuBackground@2x.png"; sourceTree = "<group>"; };
-		70EBDD5A1AEFD5D4005EABEF /* pullrefresh.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = pullrefresh.aif; sourceTree = "<group>"; };
-		70EBDD5B1AEFD5D4005EABEF /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
-		70EBDD5C1AEFD5D4005EABEF /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
-		70EBDD5D1AEFD5D4005EABEF /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
-		70EBDD5E1AEFD5D4005EABEF /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
-		70EBDD5F1AEFD5D4005EABEF /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
-		70EBDD601AEFD5D4005EABEF /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
-		70EBDD621AEFD5D4005EABEF /* XHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageViewer.h; sourceTree = "<group>"; };
-		70EBDD631AEFD5D4005EABEF /* XHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageViewer.m; sourceTree = "<group>"; };
-		70EBDD641AEFD5D4005EABEF /* XHViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewState.h; sourceTree = "<group>"; };
-		70EBDD651AEFD5D4005EABEF /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
-		70EBDD661AEFD5D4005EABEF /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
-		70EBDD671AEFD5D4005EABEF /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
-		70EBDD731AEFD7D6005EABEF /* AVUser+MCCustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+MCCustomUser.h"; sourceTree = "<group>"; };
-		70EBDD741AEFD7D6005EABEF /* AVUser+MCCustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+MCCustomUser.m"; sourceTree = "<group>"; };
+		73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80ACA871095105E2C061670D /* Pods-MCAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCAlbum/Pods-MCAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		EE9910D5E01A877F8CE4680D /* Pods-MCAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCAlbum/Pods-MCAlbum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0AF1C0296854C0FF0349A2A /* libPods-MCAlbum.a in Frameworks */,
+				3FF40895072CD95F00B7141D /* libPods-LZAlbum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,46 +165,198 @@
 			isa = PBXGroup;
 			children = (
 				12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */,
+				73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		700C08161AEFED4400A14D93 /* form */ = {
+		700C083F1AF008D000A14D93 /* LZAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				700C08171AEFED4400A14D93 /* LZEntryForm.h */,
-				700C08181AEFED4400A14D93 /* LZEntryForm.m */,
-				700C08191AEFED4400A14D93 /* LZLoginForm.h */,
-				700C081A1AEFED4400A14D93 /* LZLoginForm.m */,
-				700C081B1AEFED4400A14D93 /* LZRegisterForm.h */,
-				700C081C1AEFED4400A14D93 /* LZRegisterForm.m */,
+				700C08401AF008D000A14D93 /* album */,
+				700C08461AF008D000A14D93 /* base */,
+				700C084B1AF008D000A14D93 /* LaunchScreen.xib */,
+				700C084D1AF008D000A14D93 /* Images.xcassets */,
+				700C084E1AF008D000A14D93 /* Info.plist */,
+				700C084F1AF008D000A14D93 /* main.m */,
+				700C08501AF008D000A14D93 /* manager */,
+				700C08531AF008D000A14D93 /* model */,
+				700C08641AF008D000A14D93 /* resources */,
+				700C08701AF008D000A14D93 /* ui */,
+				700C08861AF008D000A14D93 /* vendor */,
+			);
+			path = LZAlbum;
+			sourceTree = "<group>";
+		};
+		700C08401AF008D000A14D93 /* album */ = {
+			isa = PBXGroup;
+			children = (
+				700C08411AF008D000A14D93 /* LZAlbumCreateVC.h */,
+				700C08421AF008D000A14D93 /* LZAlbumCreateVC.m */,
+				700C08431AF008D000A14D93 /* LZAlbumCreateVC.xib */,
+				700C08441AF008D000A14D93 /* LZAlbumVC.h */,
+				700C08451AF008D000A14D93 /* LZAlbumVC.m */,
+			);
+			path = album;
+			sourceTree = "<group>";
+		};
+		700C08461AF008D000A14D93 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				700C08471AF008D000A14D93 /* AppDelegate.h */,
+				700C08481AF008D000A14D93 /* AppDelegate.m */,
+				700C08491AF008D000A14D93 /* LZCommon.h */,
+				700C084A1AF008D000A14D93 /* LZMacros.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		700C08501AF008D000A14D93 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				700C08511AF008D000A14D93 /* LZAlbumManager.h */,
+				700C08521AF008D000A14D93 /* LZAlbumManager.m */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		700C08531AF008D000A14D93 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				700C08541AF008D000A14D93 /* AVUser+MCCustomUser.h */,
+				700C08551AF008D000A14D93 /* AVUser+MCCustomUser.m */,
+				700C08561AF008D000A14D93 /* form */,
+				700C085D1AF008D000A14D93 /* LCAlbum.h */,
+				700C085E1AF008D000A14D93 /* LCAlbum.m */,
+				700C085F1AF008D000A14D93 /* LZAlbum.h */,
+				700C08601AF008D000A14D93 /* LZAlbum.m */,
+				700C08611AF008D000A14D93 /* LZAVObjectHeader.h */,
+				700C08621AF008D000A14D93 /* LZComment.h */,
+				700C08631AF008D000A14D93 /* LZComment.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		700C08561AF008D000A14D93 /* form */ = {
+			isa = PBXGroup;
+			children = (
+				700C08571AF008D000A14D93 /* LZEntryForm.h */,
+				700C08581AF008D000A14D93 /* LZEntryForm.m */,
+				700C08591AF008D000A14D93 /* LZLoginForm.h */,
+				700C085A1AF008D000A14D93 /* LZLoginForm.m */,
+				700C085B1AF008D000A14D93 /* LZRegisterForm.h */,
+				700C085C1AF008D000A14D93 /* LZRegisterForm.m */,
 			);
 			path = form;
 			sourceTree = "<group>";
 		};
-		700C08221AEFFA2000A14D93 /* resources */ = {
+		700C08641AF008D000A14D93 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				700C08231AEFFA5300A14D93 /* album_add_photo@2x.png */,
-				700C08251AEFFAEA00A14D93 /* Album_like_icon@2x.png */,
-				700C08261AEFFAEA00A14D93 /* Album_likes_comments_background@2x.png */,
-				700C08271AEFFAEA00A14D93 /* AlbumAddBtn@2x.png */,
-				700C08281AEFFAEA00A14D93 /* AlbumAddBtnHL@2x.png */,
-				700C08291AEFFAEA00A14D93 /* AlbumFlagMark@2x.png */,
-				700C082A1AEFFAEA00A14D93 /* AlbumHeaderBackgrounImage@2x.png */,
-				700C082B1AEFFAEA00A14D93 /* AlbumInformationLikeHL@2x.png */,
-				700C082C1AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png */,
-				700C082D1AEFFAEA00A14D93 /* AlbumOperateMore@2x.png */,
-				700C082E1AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png */,
+				700C08651AF008D000A14D93 /* album_add_photo@2x.png */,
+				700C08661AF008D000A14D93 /* Album_like_icon@2x.png */,
+				700C08671AF008D000A14D93 /* Album_likes_comments_background@2x.png */,
+				700C08681AF008D000A14D93 /* AlbumAddBtn@2x.png */,
+				700C08691AF008D000A14D93 /* AlbumAddBtnHL@2x.png */,
+				700C086A1AF008D000A14D93 /* AlbumFlagMark@2x.png */,
+				700C086B1AF008D000A14D93 /* AlbumHeaderBackgrounImage@2x.png */,
+				700C086C1AF008D000A14D93 /* AlbumInformationLikeHL@2x.png */,
+				700C086D1AF008D000A14D93 /* AlbumInformationLikeHL@3x.png */,
+				700C086E1AF008D000A14D93 /* AlbumOperateMore@2x.png */,
+				700C086F1AF008D000A14D93 /* AlbumOperateMoreHL@2x.png */,
 			);
 			path = resources;
 			sourceTree = "<group>";
 		};
-		700C083B1AF0084E00A14D93 /* XHPhotographyHelper */ = {
+		700C08701AF008D000A14D93 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				700C083C1AF0084E00A14D93 /* XHPhotographyHelper.h */,
-				700C083D1AF0084E00A14D93 /* XHPhotographyHelper.m */,
+				700C08711AF008D000A14D93 /* LZBaseTC.h */,
+				700C08721AF008D000A14D93 /* LZBaseTC.m */,
+				700C08731AF008D000A14D93 /* LZBaseVC.h */,
+				700C08741AF008D000A14D93 /* LZBaseVC.m */,
+				700C08751AF008D000A14D93 /* LZEntryFormController.h */,
+				700C08761AF008D000A14D93 /* LZEntryFormController.m */,
+				700C08771AF008D000A14D93 /* views */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		700C08771AF008D000A14D93 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				700C08781AF008D000A14D93 /* LZAlbumCollectionFlowLayout.h */,
+				700C08791AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m */,
+				700C087A1AF008D000A14D93 /* LZAlbumLikesCommentsView.h */,
+				700C087B1AF008D000A14D93 /* LZAlbumLikesCommentsView.m */,
+				700C087C1AF008D000A14D93 /* LZAlbumOperationView.h */,
+				700C087D1AF008D000A14D93 /* LZAlbumOperationView.m */,
+				700C087E1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.h */,
+				700C087F1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.m */,
+				700C08801AF008D000A14D93 /* LZAlbumReplyView.h */,
+				700C08811AF008D000A14D93 /* LZAlbumReplyView.m */,
+				700C08821AF008D000A14D93 /* LZAlbumRichTextView.h */,
+				700C08831AF008D000A14D93 /* LZAlbumRichTextView.m */,
+				700C08841AF008D000A14D93 /* LZAlbumTableViewCell.h */,
+				700C08851AF008D000A14D93 /* LZAlbumTableViewCell.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		700C08861AF008D000A14D93 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				700C08871AF008D000A14D93 /* PathCover */,
+				700C08941AF008D000A14D93 /* XHImageViewer */,
+				700C089B1AF008D000A14D93 /* XHPhotographyHelper */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		700C08871AF008D000A14D93 /* PathCover */ = {
+			isa = PBXGroup;
+			children = (
+				700C08881AF008D000A14D93 /* Resources */,
+				700C088E1AF008D000A14D93 /* XHPathCover.h */,
+				700C088F1AF008D000A14D93 /* XHPathCover.m */,
+				700C08901AF008D000A14D93 /* XHSoundManager.h */,
+				700C08911AF008D000A14D93 /* XHSoundManager.m */,
+				700C08921AF008D000A14D93 /* XHWaterDropRefresh.h */,
+				700C08931AF008D000A14D93 /* XHWaterDropRefresh.m */,
+			);
+			path = PathCover;
+			sourceTree = "<group>";
+		};
+		700C08881AF008D000A14D93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				700C08891AF008D000A14D93 /* circle.png */,
+				700C088A1AF008D000A14D93 /* circle@2x.png */,
+				700C088B1AF008D000A14D93 /* meicon.png */,
+				700C088C1AF008D000A14D93 /* MenuBackground@2x.png */,
+				700C088D1AF008D000A14D93 /* pullrefresh.aif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		700C08941AF008D000A14D93 /* XHImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				700C08951AF008D000A14D93 /* XHImageViewer.h */,
+				700C08961AF008D000A14D93 /* XHImageViewer.m */,
+				700C08971AF008D000A14D93 /* XHViewState.h */,
+				700C08981AF008D000A14D93 /* XHViewState.m */,
+				700C08991AF008D000A14D93 /* XHZoomingImageView.h */,
+				700C089A1AF008D000A14D93 /* XHZoomingImageView.m */,
+			);
+			path = XHImageViewer;
+			sourceTree = "<group>";
+		};
+		700C089B1AF008D000A14D93 /* XHPhotographyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				700C089C1AF008D000A14D93 /* XHPhotographyHelper.h */,
+				700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */,
 			);
 			path = XHPhotographyHelper;
 			sourceTree = "<group>";
@@ -208,7 +364,7 @@
 		70EBDCBF1AEFCDE5005EABEF = {
 			isa = PBXGroup;
 			children = (
-				70EBDCCA1AEFCDE5005EABEF /* LZAlbum */,
+				700C083F1AF008D000A14D93 /* LZAlbum */,
 				70EBDCC91AEFCDE5005EABEF /* Products */,
 				B336D24C107235B00692E160 /* Pods */,
 				551EA01E9720C5522C87F7D6 /* Frameworks */,
@@ -221,166 +377,6 @@
 				70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		70EBDCCA1AEFCDE5005EABEF /* LZAlbum */ = {
-			isa = PBXGroup;
-			children = (
-				700C08221AEFFA2000A14D93 /* resources */,
-				70EBDD501AEFD3F6005EABEF /* vendor */,
-				70EBDD4A1AEFD208005EABEF /* base */,
-				70EBDD401AEFCFE0005EABEF /* manager */,
-				70EBDD361AEFCFC5005EABEF /* model */,
-				70EBDD1C1AEFCFBF005EABEF /* ui */,
-				70EBDCF11AEFCE2D005EABEF /* album */,
-				70EBDCD81AEFCDE5005EABEF /* Images.xcassets */,
-				70EBDCDA1AEFCDE5005EABEF /* LaunchScreen.xib */,
-				70EBDCCB1AEFCDE5005EABEF /* Supporting Files */,
-			);
-			name = LZAlbum;
-			path = MCAlbum;
-			sourceTree = "<group>";
-		};
-		70EBDCCB1AEFCDE5005EABEF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDCCC1AEFCDE5005EABEF /* Info.plist */,
-				70EBDCCD1AEFCDE5005EABEF /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		70EBDCF11AEFCE2D005EABEF /* album */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDCF21AEFCE2D005EABEF /* LZAlbumCreateVC.h */,
-				70EBDCF31AEFCE2D005EABEF /* LZAlbumCreateVC.m */,
-				70EBDCF41AEFCE2D005EABEF /* LZAlbumCreateVC.xib */,
-				70EBDCF51AEFCE2D005EABEF /* LZAlbumVC.h */,
-				70EBDCF61AEFCE2D005EABEF /* LZAlbumVC.m */,
-			);
-			path = album;
-			sourceTree = "<group>";
-		};
-		70EBDD1C1AEFCFBF005EABEF /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD1F1AEFCFBF005EABEF /* views */,
-				70EBDD471AEFD1EF005EABEF /* LZBaseTC.h */,
-				70EBDD481AEFD1EF005EABEF /* LZBaseTC.m */,
-				70EBDD441AEFD1DA005EABEF /* LZBaseVC.h */,
-				70EBDD451AEFD1DA005EABEF /* LZBaseVC.m */,
-				700C08131AEFEB3200A14D93 /* LZEntryFormController.h */,
-				700C08141AEFEB3200A14D93 /* LZEntryFormController.m */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		70EBDD1F1AEFCFBF005EABEF /* views */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD201AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.h */,
-				70EBDD211AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.m */,
-				70EBDD221AEFCFBF005EABEF /* LZAlbumLikesCommentsView.h */,
-				70EBDD231AEFCFBF005EABEF /* LZAlbumLikesCommentsView.m */,
-				70EBDD241AEFCFBF005EABEF /* LZAlbumOperationView.h */,
-				70EBDD251AEFCFBF005EABEF /* LZAlbumOperationView.m */,
-				70EBDD261AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.h */,
-				70EBDD271AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.m */,
-				70EBDD281AEFCFBF005EABEF /* LZAlbumReplyView.h */,
-				70EBDD291AEFCFBF005EABEF /* LZAlbumReplyView.m */,
-				70EBDD2A1AEFCFBF005EABEF /* LZAlbumRichTextView.h */,
-				70EBDD2B1AEFCFBF005EABEF /* LZAlbumRichTextView.m */,
-				70EBDD2C1AEFCFBF005EABEF /* LZAlbumTableViewCell.h */,
-				70EBDD2D1AEFCFBF005EABEF /* LZAlbumTableViewCell.m */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		70EBDD361AEFCFC5005EABEF /* model */ = {
-			isa = PBXGroup;
-			children = (
-				700C08161AEFED4400A14D93 /* form */,
-				706F24F01AEFE44600C80893 /* LZAVObjectHeader.h */,
-				70EBDD731AEFD7D6005EABEF /* AVUser+MCCustomUser.h */,
-				70EBDD741AEFD7D6005EABEF /* AVUser+MCCustomUser.m */,
-				70EBDD371AEFCFC5005EABEF /* LCAlbum.h */,
-				70EBDD381AEFCFC5005EABEF /* LCAlbum.m */,
-				70EBDD391AEFCFC5005EABEF /* LZAlbum.h */,
-				70EBDD3A1AEFCFC5005EABEF /* LZAlbum.m */,
-				70EBDD3B1AEFCFC5005EABEF /* LZComment.h */,
-				70EBDD3C1AEFCFC5005EABEF /* LZComment.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		70EBDD401AEFCFE0005EABEF /* manager */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD411AEFCFE0005EABEF /* LZAlbumManager.h */,
-				70EBDD421AEFCFE0005EABEF /* LZAlbumManager.m */,
-			);
-			path = manager;
-			sourceTree = "<group>";
-		};
-		70EBDD4A1AEFD208005EABEF /* base */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD4E1AEFD235005EABEF /* LZCommon.h */,
-				70EBDD4F1AEFD235005EABEF /* LZMacros.h */,
-				70EBDD4B1AEFD208005EABEF /* AppDelegate.h */,
-				70EBDD4C1AEFD208005EABEF /* AppDelegate.m */,
-			);
-			path = base;
-			sourceTree = "<group>";
-		};
-		70EBDD501AEFD3F6005EABEF /* vendor */ = {
-			isa = PBXGroup;
-			children = (
-				700C083B1AF0084E00A14D93 /* XHPhotographyHelper */,
-				70EBDD541AEFD5D4005EABEF /* PathCover */,
-				70EBDD611AEFD5D4005EABEF /* XHImageViewer */,
-			);
-			path = vendor;
-			sourceTree = "<group>";
-		};
-		70EBDD541AEFD5D4005EABEF /* PathCover */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD551AEFD5D4005EABEF /* Resources */,
-				70EBDD5B1AEFD5D4005EABEF /* XHPathCover.h */,
-				70EBDD5C1AEFD5D4005EABEF /* XHPathCover.m */,
-				70EBDD5D1AEFD5D4005EABEF /* XHSoundManager.h */,
-				70EBDD5E1AEFD5D4005EABEF /* XHSoundManager.m */,
-				70EBDD5F1AEFD5D4005EABEF /* XHWaterDropRefresh.h */,
-				70EBDD601AEFD5D4005EABEF /* XHWaterDropRefresh.m */,
-			);
-			path = PathCover;
-			sourceTree = "<group>";
-		};
-		70EBDD551AEFD5D4005EABEF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD561AEFD5D4005EABEF /* circle.png */,
-				70EBDD571AEFD5D4005EABEF /* circle@2x.png */,
-				70EBDD581AEFD5D4005EABEF /* meicon.png */,
-				70EBDD591AEFD5D4005EABEF /* MenuBackground@2x.png */,
-				70EBDD5A1AEFD5D4005EABEF /* pullrefresh.aif */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		70EBDD611AEFD5D4005EABEF /* XHImageViewer */ = {
-			isa = PBXGroup;
-			children = (
-				70EBDD621AEFD5D4005EABEF /* XHImageViewer.h */,
-				70EBDD631AEFD5D4005EABEF /* XHImageViewer.m */,
-				70EBDD641AEFD5D4005EABEF /* XHViewState.h */,
-				70EBDD651AEFD5D4005EABEF /* XHViewState.m */,
-				70EBDD661AEFD5D4005EABEF /* XHZoomingImageView.h */,
-				70EBDD671AEFD5D4005EABEF /* XHZoomingImageView.m */,
-			);
-			path = XHImageViewer;
 			sourceTree = "<group>";
 		};
 		B336D24C107235B00692E160 /* Pods */ = {
@@ -451,25 +447,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700C082F1AEFFAEA00A14D93 /* Album_like_icon@2x.png in Resources */,
-				70EBDD6C1AEFD5D4005EABEF /* pullrefresh.aif in Resources */,
-				70EBDCDC1AEFCDE5005EABEF /* LaunchScreen.xib in Resources */,
-				70EBDD681AEFD5D4005EABEF /* circle.png in Resources */,
-				700C08321AEFFAEA00A14D93 /* AlbumAddBtnHL@2x.png in Resources */,
-				70EBDCF81AEFCE2D005EABEF /* LZAlbumCreateVC.xib in Resources */,
-				700C08371AEFFAEA00A14D93 /* AlbumOperateMore@2x.png in Resources */,
-				700C08311AEFFAEA00A14D93 /* AlbumAddBtn@2x.png in Resources */,
-				700C08301AEFFAEA00A14D93 /* Album_likes_comments_background@2x.png in Resources */,
-				70EBDD6A1AEFD5D4005EABEF /* meicon.png in Resources */,
-				700C08331AEFFAEA00A14D93 /* AlbumFlagMark@2x.png in Resources */,
-				700C08381AEFFAEA00A14D93 /* AlbumOperateMoreHL@2x.png in Resources */,
-				700C08351AEFFAEA00A14D93 /* AlbumInformationLikeHL@2x.png in Resources */,
-				70EBDD691AEFD5D4005EABEF /* circle@2x.png in Resources */,
-				70EBDCD91AEFCDE5005EABEF /* Images.xcassets in Resources */,
-				70EBDD6B1AEFD5D4005EABEF /* MenuBackground@2x.png in Resources */,
-				700C08341AEFFAEA00A14D93 /* AlbumHeaderBackgrounImage@2x.png in Resources */,
-				700C08241AEFFA5300A14D93 /* album_add_photo@2x.png in Resources */,
-				700C08361AEFFAEA00A14D93 /* AlbumInformationLikeHL@3x.png in Resources */,
+				700C08AF1AF008D000A14D93 /* Album_like_icon@2x.png in Resources */,
+				700C08A41AF008D000A14D93 /* Info.plist in Resources */,
+				700C08B01AF008D000A14D93 /* Album_likes_comments_background@2x.png in Resources */,
+				700C08B61AF008D000A14D93 /* AlbumInformationLikeHL@3x.png in Resources */,
+				700C08B31AF008D000A14D93 /* AlbumFlagMark@2x.png in Resources */,
+				700C08C71AF008D000A14D93 /* pullrefresh.aif in Resources */,
+				700C08A31AF008D000A14D93 /* Images.xcassets in Resources */,
+				700C08A21AF008D000A14D93 /* LaunchScreen.xib in Resources */,
+				700C08B41AF008D000A14D93 /* AlbumHeaderBackgrounImage@2x.png in Resources */,
+				700C08C51AF008D000A14D93 /* meicon.png in Resources */,
+				700C08C41AF008D000A14D93 /* circle@2x.png in Resources */,
+				700C08B11AF008D000A14D93 /* AlbumAddBtn@2x.png in Resources */,
+				700C08AE1AF008D000A14D93 /* album_add_photo@2x.png in Resources */,
+				700C089F1AF008D000A14D93 /* LZAlbumCreateVC.xib in Resources */,
+				700C08B81AF008D000A14D93 /* AlbumOperateMoreHL@2x.png in Resources */,
+				700C08B51AF008D000A14D93 /* AlbumInformationLikeHL@2x.png in Resources */,
+				700C08C61AF008D000A14D93 /* MenuBackground@2x.png in Resources */,
+				700C08B71AF008D000A14D93 /* AlbumOperateMore@2x.png in Resources */,
+				700C08B21AF008D000A14D93 /* AlbumAddBtnHL@2x.png in Resources */,
+				700C08C31AF008D000A14D93 /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +500,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCAlbum/Pods-MCAlbum-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -513,45 +510,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70EBDD331AEFCFBF005EABEF /* LZAlbumReplyView.m in Sources */,
-				70EBDD751AEFD7D6005EABEF /* AVUser+MCCustomUser.m in Sources */,
-				70EBDCF91AEFCE2D005EABEF /* LZAlbumVC.m in Sources */,
-				70EBDD3E1AEFCFC5005EABEF /* LZAlbum.m in Sources */,
-				700C081E1AEFED4400A14D93 /* LZLoginForm.m in Sources */,
-				700C083E1AF0084E00A14D93 /* XHPhotographyHelper.m in Sources */,
-				70EBDD6D1AEFD5D4005EABEF /* XHPathCover.m in Sources */,
-				70EBDCF71AEFCE2D005EABEF /* LZAlbumCreateVC.m in Sources */,
-				70EBDD711AEFD5D4005EABEF /* XHViewState.m in Sources */,
-				70EBDD461AEFD1DA005EABEF /* LZBaseVC.m in Sources */,
-				70EBDD2F1AEFCFBF005EABEF /* LZAlbumCollectionFlowLayout.m in Sources */,
-				70EBDD431AEFCFE0005EABEF /* LZAlbumManager.m in Sources */,
-				70EBDCCE1AEFCDE5005EABEF /* main.m in Sources */,
-				70EBDD6F1AEFD5D4005EABEF /* XHWaterDropRefresh.m in Sources */,
-				70EBDD721AEFD5D4005EABEF /* XHZoomingImageView.m in Sources */,
-				70EBDD311AEFCFBF005EABEF /* LZAlbumOperationView.m in Sources */,
-				700C081F1AEFED4400A14D93 /* LZRegisterForm.m in Sources */,
-				70EBDD351AEFCFBF005EABEF /* LZAlbumTableViewCell.m in Sources */,
-				70EBDD341AEFCFBF005EABEF /* LZAlbumRichTextView.m in Sources */,
-				70EBDD321AEFCFBF005EABEF /* LZAlbumPhotoCollectionViewCell.m in Sources */,
-				70EBDD701AEFD5D4005EABEF /* XHImageViewer.m in Sources */,
-				70EBDD3F1AEFCFC5005EABEF /* LZComment.m in Sources */,
-				700C081D1AEFED4400A14D93 /* LZEntryForm.m in Sources */,
-				70EBDD4D1AEFD208005EABEF /* AppDelegate.m in Sources */,
-				70EBDD3D1AEFCFC5005EABEF /* LCAlbum.m in Sources */,
-				70EBDD6E1AEFD5D4005EABEF /* XHSoundManager.m in Sources */,
-				70EBDD301AEFCFBF005EABEF /* LZAlbumLikesCommentsView.m in Sources */,
-				700C08151AEFEB3200A14D93 /* LZEntryFormController.m in Sources */,
-				70EBDD491AEFD1EF005EABEF /* LZBaseTC.m in Sources */,
+				700C08C11AF008D000A14D93 /* LZAlbumRichTextView.m in Sources */,
+				700C08BF1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.m in Sources */,
+				700C08A01AF008D000A14D93 /* LZAlbumVC.m in Sources */,
+				700C08C81AF008D000A14D93 /* XHPathCover.m in Sources */,
+				700C08BD1AF008D000A14D93 /* LZAlbumLikesCommentsView.m in Sources */,
+				700C08BC1AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m in Sources */,
+				700C08B91AF008D000A14D93 /* LZBaseTC.m in Sources */,
+				700C08C91AF008D000A14D93 /* XHSoundManager.m in Sources */,
+				700C08A81AF008D000A14D93 /* LZEntryForm.m in Sources */,
+				700C08A71AF008D000A14D93 /* AVUser+MCCustomUser.m in Sources */,
+				700C08A91AF008D000A14D93 /* LZLoginForm.m in Sources */,
+				700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */,
+				700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */,
+				700C08BB1AF008D000A14D93 /* LZEntryFormController.m in Sources */,
+				700C08A61AF008D000A14D93 /* LZAlbumManager.m in Sources */,
+				700C089E1AF008D000A14D93 /* LZAlbumCreateVC.m in Sources */,
+				700C08CE1AF008D000A14D93 /* XHPhotographyHelper.m in Sources */,
+				700C08BA1AF008D000A14D93 /* LZBaseVC.m in Sources */,
+				700C08C21AF008D000A14D93 /* LZAlbumTableViewCell.m in Sources */,
+				700C08AB1AF008D000A14D93 /* LCAlbum.m in Sources */,
+				700C08AD1AF008D000A14D93 /* LZComment.m in Sources */,
+				700C08CA1AF008D000A14D93 /* XHWaterDropRefresh.m in Sources */,
+				700C08AA1AF008D000A14D93 /* LZRegisterForm.m in Sources */,
+				700C08A51AF008D000A14D93 /* main.m in Sources */,
+				700C08AC1AF008D000A14D93 /* LZAlbum.m in Sources */,
+				700C08BE1AF008D000A14D93 /* LZAlbumOperationView.m in Sources */,
+				700C08A11AF008D000A14D93 /* AppDelegate.m in Sources */,
+				700C08C01AF008D000A14D93 /* LZAlbumReplyView.m in Sources */,
+				700C08CB1AF008D000A14D93 /* XHImageViewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		70EBDCDA1AEFCDE5005EABEF /* LaunchScreen.xib */ = {
+		700C084B1AF008D000A14D93 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				70EBDCDB1AEFCDE5005EABEF /* Base */,
+				700C084C1AF008D000A14D93 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -644,7 +641,7 @@
 			baseConfigurationReference = 80ACA871095105E2C061670D /* Pods-MCAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MCAlbum/Info.plist;
+				INFOPLIST_FILE = LZAlbum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = LZAlbum;
@@ -656,7 +653,7 @@
 			baseConfigurationReference = EE9910D5E01A877F8CE4680D /* Pods-MCAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MCAlbum/Info.plist;
+				INFOPLIST_FILE = LZAlbum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = LZAlbum;
