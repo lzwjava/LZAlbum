@@ -73,7 +73,7 @@
 
 -(void)toMainVC{
     AppDelegate *appDelegate=[UIApplication sharedApplication].delegate;
-    [appDelegate toMain];
+    [appDelegate toNextController];
 }
 
 

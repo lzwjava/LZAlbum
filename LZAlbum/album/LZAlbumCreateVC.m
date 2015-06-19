@@ -10,6 +10,7 @@
 #import "XHPhotographyHelper.h"
 #import "LZAlbumManager.h"
 #import "LZAlbumPhotoCollectionViewCell.h"
+#import "AppDelegate.h"
 
 static CGFloat kLZAlbumCreateVCPhotoSize=60;
 
@@ -32,7 +33,7 @@ static NSString* photoCellIndentifier=@"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=@"新建";
-    UIBarButtonItem *logoutItem=[[UIBarButtonItem alloc] initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+    UIBarButtonItem *logoutItem=[[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     UIBarButtonItem *createItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(createFeed)];
     self.navigationItem.rightBarButtonItems=@[createItem,logoutItem];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismiss)];
@@ -45,7 +46,8 @@ static NSString* photoCellIndentifier=@"cell";
 
 -(void)logout{
     [AVUser logOut];
-    exit(0);
+    AppDelegate *delegate =(AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate toNextController];
 }
 
 -(void)createFeed{

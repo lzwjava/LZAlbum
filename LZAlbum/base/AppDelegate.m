@@ -43,6 +43,11 @@
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self toNextController];
+    return YES;
+}
+
+- (void)toNextController {
     UIViewController* nextVC;
     if([AVUser currentUser]){
         nextVC=[[LZAlbumVC alloc] init];
@@ -50,14 +55,6 @@
         nextVC=[[LZEntryFormController alloc] init];
     }
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:nextVC];
-    nav.navigationBar.barStyle = UIBarStyleBlack;
-    self.window.rootViewController = nav;
-    return YES;
-}
-
--(void)toMain{
-    LZAlbumVC* vc=[[LZAlbumVC alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     nav.navigationBar.barStyle = UIBarStyleBlack;
     self.window.rootViewController = nav;
 }
