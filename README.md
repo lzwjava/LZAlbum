@@ -24,5 +24,9 @@ UI 界面大量借鉴了 [MessageDisplayKit](https://github.com/xhzengAIB/Messag
 
 [相关文档](https://leancloud.cn/docs/ios_os_x_guide.html)
 
+# Support
+
+请提 [issue](https://github.com/lzwjava/LZAlbum/issues) 。
+
 # License
 MIT
