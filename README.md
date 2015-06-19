@@ -5,7 +5,7 @@
 
 # Run
 ```
-   pod install -no-repo-update
+   pod install --no-repo-update
    open LZAlbum.xcworkspace
 ```
 
