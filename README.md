@@ -3,7 +3,7 @@
 
 ![lzalbum](https://cloud.githubusercontent.com/assets/5022872/7377560/c02f5838-ee19-11e4-8817-df41c63311d0.gif)
 
-# 运行
+# Run
 ```
    pod install -no-repo-update
    open LZAlbum.xcworkspace
