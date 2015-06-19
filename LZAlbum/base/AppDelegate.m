@@ -23,14 +23,11 @@
     [LZComment registerSubclass];
     [AVOSCloud setApplicationId:@"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e" clientKey:@"j9de7xoza1gbvkbp0b6qudz10s9lkwsxqll2nvwrjfty3a58"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [AVOSCloud setLastModifyEnabled:YES];
     
 #ifdef DEBUG
     [AVAnalytics setAnalyticsEnabled:NO];
-    [AVAnalytics setCrashReportEnabled:NO];
-    [AVOSCloud setVerbosePolicy:kAVVerboseShow];
-    [AVLogger addLoggerDomain:AVLoggerDomainIM];
-    [AVLogger addLoggerDomain:AVLoggerDomainCURL];
-    [AVLogger setLoggerLevelMask:AVLoggerLevelAll];
+    [AVOSCloud setAllLogsEnabled:YES];
 #endif
     
     UIColor* tintColor=[UIColor colorWithRed:0.071 green:0.060 blue:0.086 alpha:1.000];
@@ -41,6 +38,7 @@
         [UINavigationBar appearance].tintColor=tintColor;
     }
     [UINavigationBar appearance].titleTextAttributes=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:17]};
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
@@ -51,13 +49,17 @@
     }else{
         nextVC=[[LZEntryFormController alloc] init];
     }
-    self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:nextVC];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:nextVC];
+    nav.navigationBar.barStyle = UIBarStyleBlack;
+    self.window.rootViewController = nav;
     return YES;
 }
 
 -(void)toMain{
     LZAlbumVC* vc=[[LZAlbumVC alloc] init];
-    self.window.rootViewController=[[UINavigationController alloc] initWithRootViewController:vc];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.navigationBar.barStyle = UIBarStyleBlack;
+    self.window.rootViewController = nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

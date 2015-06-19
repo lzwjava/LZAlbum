@@ -26,8 +26,6 @@
 
 @property (nonatomic,strong) NSIndexPath *selectedIndexPath;
 
-@property (nonatomic,strong) LZAlbumManager *albumManager;
-
 @property (nonatomic,strong) NSMutableArray *lcAlbums;
 
 @property (nonatomic,strong) NSIndexPath *commentSelectedIndexPath;
@@ -53,7 +51,7 @@
     DLog(@"refresh");
     [self showNetworkIndicator];
     WEAKSELF
-    [self.albumManager findAlbumWithBlock:^(NSArray *lcAlbums, NSError *error) {
+    [[LZAlbumManager manager] findAlbumWithBlock:^(NSArray *lcAlbums, NSError *error) {
         [weakSelf hideNetworkIndicator];
         [weakSelf.albumHeaderPathCover stopRefresh];
         if([weakSelf filterError:error]){
@@ -88,7 +86,6 @@
     NSMutableArray* albumComments=[NSMutableArray array];
     for(LZComment* comment in lcAlbum.comments){
         LZAlbumComment* albumComment=[[LZAlbumComment alloc] init];
-//        albumComment.commentUsername=comment.commentUser.username;
         albumComment.commentUsername=comment.commentUsername;
         albumComment.commentContent=comment.commentContent;
         [albumComments addObject:albumComment];
@@ -151,7 +148,7 @@
 
 -(void)addLike{
     LCAlbum* lcAlbum=self.lcAlbums[self.selectedIndexPath.row];
-    [self.albumManager digOrCancelDigOfAlbum:lcAlbum block:^(BOOL succeeded, NSError *error) {
+    [[LZAlbumManager manager] digOrCancelDigOfAlbum:lcAlbum block:^(BOOL succeeded, NSError *error) {
         if([self filterError:error]){
             [self reloadLCAlbum:lcAlbum AtIndexPath:self.selectedIndexPath];
         }
@@ -178,7 +175,7 @@
     }
     
     [self showProgress];
-    [self.albumManager commentToUser:toUser AtAlbum:lcAlbum content:text block:^(BOOL succeeded, NSError *error) {
+    [[LZAlbumManager manager] commentToUser:toUser AtAlbum:lcAlbum content:text block:^(BOOL succeeded, NSError *error) {
         [self hideProgress];
         if([self filterError:error]){
             [self reloadLCAlbum:lcAlbum AtIndexPath:self.selectedIndexPath];
@@ -256,12 +253,5 @@
 }
 
 #pragma mark - Data Propertys
-
--(LZAlbumManager*)albumManager{
-    if(_albumManager==nil){
-        _albumManager=[[LZAlbumManager alloc] init];
-    }
-    return _albumManager;
-}
 
 @end

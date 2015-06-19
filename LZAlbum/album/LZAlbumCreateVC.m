@@ -21,8 +21,6 @@ static CGFloat kLZAlbumCreateVCPhotoSize=60;
 
 @property (nonatomic,strong) NSMutableArray* selectPhotos;
 
-@property (strong,nonatomic) LZAlbumManager* feedManager;
-
 @property (strong,nonatomic) XHPhotographyHelper* photographyHelper;
 
 @end
@@ -56,7 +54,7 @@ static NSString* photoCellIndentifier=@"cell";
         [self showProgress];
         [self runInGlobalQueue:^{
             NSError* error;
-            [weakSelf.feedManager createAlbumWithText:self.contentTextField.text photos:self.selectPhotos error:&error];
+            [[LZAlbumManager manager] createAlbumWithText:self.contentTextField.text photos:self.selectPhotos error:&error];
             [weakSelf runInMainQueue:^{
                 [weakSelf hideProgress];
                 if(error==nil){
@@ -78,13 +76,6 @@ static NSString* photoCellIndentifier=@"cell";
         _photographyHelper=[[XHPhotographyHelper alloc] init];
     }
     return _photographyHelper;
-}
-
--(LZAlbumManager*)feedManager{
-    if(_feedManager==nil){
-        _feedManager=[[LZAlbumManager alloc] init];
-    }
-    return _feedManager;
 }
 
 - (void)didReceiveMemoryWarning {

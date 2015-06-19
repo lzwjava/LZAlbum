@@ -17,13 +17,10 @@
 		700C08A41AF008D000A14D93 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 700C084E1AF008D000A14D93 /* Info.plist */; };
 		700C08A51AF008D000A14D93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C084F1AF008D000A14D93 /* main.m */; };
 		700C08A61AF008D000A14D93 /* LZAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08521AF008D000A14D93 /* LZAlbumManager.m */; };
-		700C08A71AF008D000A14D93 /* AVUser+MCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08551AF008D000A14D93 /* AVUser+MCCustomUser.m */; };
 		700C08A81AF008D000A14D93 /* LZEntryForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08581AF008D000A14D93 /* LZEntryForm.m */; };
 		700C08A91AF008D000A14D93 /* LZLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C085A1AF008D000A14D93 /* LZLoginForm.m */; };
 		700C08AA1AF008D000A14D93 /* LZRegisterForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C085C1AF008D000A14D93 /* LZRegisterForm.m */; };
-		700C08AB1AF008D000A14D93 /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C085E1AF008D000A14D93 /* LCAlbum.m */; };
 		700C08AC1AF008D000A14D93 /* LZAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08601AF008D000A14D93 /* LZAlbum.m */; };
-		700C08AD1AF008D000A14D93 /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08631AF008D000A14D93 /* LZComment.m */; };
 		700C08AE1AF008D000A14D93 /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08651AF008D000A14D93 /* album_add_photo@2x.png */; };
 		700C08AF1AF008D000A14D93 /* Album_like_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08661AF008D000A14D93 /* Album_like_icon@2x.png */; };
 		700C08B01AF008D000A14D93 /* Album_likes_comments_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700C08671AF008D000A14D93 /* Album_likes_comments_background@2x.png */; };
@@ -57,6 +54,9 @@
 		700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08981AF008D000A14D93 /* XHViewState.m */; };
 		700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089A1AF008D000A14D93 /* XHZoomingImageView.m */; };
 		700C08CE1AF008D000A14D93 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */; };
+		70BEDBDD1B33F0E1004A1D39 /* AVUser+MCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD71B33F0E1004A1D39 /* AVUser+MCCustomUser.m */; };
+		70BEDBDE1B33F0E1004A1D39 /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD91B33F0E1004A1D39 /* LCAlbum.m */; };
+		70BEDBDF1B33F0E1004A1D39 /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBDC1B33F0E1004A1D39 /* LZComment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,23 +75,16 @@
 		700C084D1AF008D000A14D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		700C084E1AF008D000A14D93 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		700C084F1AF008D000A14D93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		700C08511AF008D000A14D93 /* LZAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumManager.h; sourceTree = "<group>"; };
-		700C08521AF008D000A14D93 /* LZAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumManager.m; sourceTree = "<group>"; };
-		700C08541AF008D000A14D93 /* AVUser+MCCustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+MCCustomUser.h"; sourceTree = "<group>"; };
-		700C08551AF008D000A14D93 /* AVUser+MCCustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+MCCustomUser.m"; sourceTree = "<group>"; };
+		700C08511AF008D000A14D93 /* LZAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZAlbumManager.h; path = manager/LZAlbumManager.h; sourceTree = "<group>"; };
+		700C08521AF008D000A14D93 /* LZAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZAlbumManager.m; path = manager/LZAlbumManager.m; sourceTree = "<group>"; };
 		700C08571AF008D000A14D93 /* LZEntryForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZEntryForm.h; sourceTree = "<group>"; };
 		700C08581AF008D000A14D93 /* LZEntryForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZEntryForm.m; sourceTree = "<group>"; };
 		700C08591AF008D000A14D93 /* LZLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginForm.h; sourceTree = "<group>"; };
 		700C085A1AF008D000A14D93 /* LZLoginForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginForm.m; sourceTree = "<group>"; };
 		700C085B1AF008D000A14D93 /* LZRegisterForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRegisterForm.h; sourceTree = "<group>"; };
 		700C085C1AF008D000A14D93 /* LZRegisterForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRegisterForm.m; sourceTree = "<group>"; };
-		700C085D1AF008D000A14D93 /* LCAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAlbum.h; sourceTree = "<group>"; };
-		700C085E1AF008D000A14D93 /* LCAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAlbum.m; sourceTree = "<group>"; };
 		700C085F1AF008D000A14D93 /* LZAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbum.h; sourceTree = "<group>"; };
 		700C08601AF008D000A14D93 /* LZAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbum.m; sourceTree = "<group>"; };
-		700C08611AF008D000A14D93 /* LZAVObjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAVObjectHeader.h; sourceTree = "<group>"; };
-		700C08621AF008D000A14D93 /* LZComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZComment.h; sourceTree = "<group>"; };
-		700C08631AF008D000A14D93 /* LZComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZComment.m; sourceTree = "<group>"; };
 		700C08651AF008D000A14D93 /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
 		700C08661AF008D000A14D93 /* Album_like_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_like_icon@2x.png"; sourceTree = "<group>"; };
 		700C08671AF008D000A14D93 /* Album_likes_comments_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_likes_comments_background@2x.png"; sourceTree = "<group>"; };
@@ -142,6 +135,13 @@
 		700C089A1AF008D000A14D93 /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
 		700C089C1AF008D000A14D93 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
 		700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
+		70BEDBD61B33F0E1004A1D39 /* AVUser+MCCustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+MCCustomUser.h"; sourceTree = "<group>"; };
+		70BEDBD71B33F0E1004A1D39 /* AVUser+MCCustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+MCCustomUser.m"; sourceTree = "<group>"; };
+		70BEDBD81B33F0E1004A1D39 /* LCAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAlbum.h; sourceTree = "<group>"; };
+		70BEDBD91B33F0E1004A1D39 /* LCAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCAlbum.m; sourceTree = "<group>"; };
+		70BEDBDA1B33F0E1004A1D39 /* LZAVObjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAVObjectHeader.h; sourceTree = "<group>"; };
+		70BEDBDB1B33F0E1004A1D39 /* LZComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZComment.h; sourceTree = "<group>"; };
+		70BEDBDC1B33F0E1004A1D39 /* LZComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZComment.m; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9D5B0AB9E7AADF7534422E /* Pods-LZAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,15 +171,15 @@
 		700C083F1AF008D000A14D93 /* LZAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				700C08401AF008D000A14D93 /* album */,
-				700C08461AF008D000A14D93 /* base */,
+				700C08641AF008D000A14D93 /* resources */,
 				700C084B1AF008D000A14D93 /* LaunchScreen.xib */,
 				700C084D1AF008D000A14D93 /* Images.xcassets */,
 				700C084E1AF008D000A14D93 /* Info.plist */,
 				700C084F1AF008D000A14D93 /* main.m */,
-				700C08501AF008D000A14D93 /* manager */,
+				700C08461AF008D000A14D93 /* base */,
+				70BEDBE01B33F115004A1D39 /* leancloud */,
 				700C08531AF008D000A14D93 /* model */,
-				700C08641AF008D000A14D93 /* resources */,
+				700C08401AF008D000A14D93 /* album */,
 				700C08701AF008D000A14D93 /* ui */,
 				700C08861AF008D000A14D93 /* vendor */,
 			);
@@ -209,28 +209,12 @@
 			path = base;
 			sourceTree = "<group>";
 		};
-		700C08501AF008D000A14D93 /* manager */ = {
-			isa = PBXGroup;
-			children = (
-				700C08511AF008D000A14D93 /* LZAlbumManager.h */,
-				700C08521AF008D000A14D93 /* LZAlbumManager.m */,
-			);
-			path = manager;
-			sourceTree = "<group>";
-		};
 		700C08531AF008D000A14D93 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				700C08541AF008D000A14D93 /* AVUser+MCCustomUser.h */,
-				700C08551AF008D000A14D93 /* AVUser+MCCustomUser.m */,
 				700C08561AF008D000A14D93 /* form */,
-				700C085D1AF008D000A14D93 /* LCAlbum.h */,
-				700C085E1AF008D000A14D93 /* LCAlbum.m */,
 				700C085F1AF008D000A14D93 /* LZAlbum.h */,
 				700C08601AF008D000A14D93 /* LZAlbum.m */,
-				700C08611AF008D000A14D93 /* LZAVObjectHeader.h */,
-				700C08621AF008D000A14D93 /* LZComment.h */,
-				700C08631AF008D000A14D93 /* LZComment.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -357,6 +341,31 @@
 				700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */,
 			);
 			path = XHPhotographyHelper;
+			sourceTree = "<group>";
+		};
+		70BEDBD51B33F0E1004A1D39 /* avobject */ = {
+			isa = PBXGroup;
+			children = (
+				70BEDBD61B33F0E1004A1D39 /* AVUser+MCCustomUser.h */,
+				70BEDBD71B33F0E1004A1D39 /* AVUser+MCCustomUser.m */,
+				70BEDBD81B33F0E1004A1D39 /* LCAlbum.h */,
+				70BEDBD91B33F0E1004A1D39 /* LCAlbum.m */,
+				70BEDBDA1B33F0E1004A1D39 /* LZAVObjectHeader.h */,
+				70BEDBDB1B33F0E1004A1D39 /* LZComment.h */,
+				70BEDBDC1B33F0E1004A1D39 /* LZComment.m */,
+			);
+			name = avobject;
+			path = model/avobject;
+			sourceTree = "<group>";
+		};
+		70BEDBE01B33F115004A1D39 /* leancloud */ = {
+			isa = PBXGroup;
+			children = (
+				70BEDBD51B33F0E1004A1D39 /* avobject */,
+				700C08511AF008D000A14D93 /* LZAlbumManager.h */,
+				700C08521AF008D000A14D93 /* LZAlbumManager.m */,
+			);
+			name = leancloud;
 			sourceTree = "<group>";
 		};
 		70EBDCBF1AEFCDE5005EABEF = {
@@ -512,27 +521,27 @@
 				700C08BF1AF008D000A14D93 /* LZAlbumPhotoCollectionViewCell.m in Sources */,
 				700C08A01AF008D000A14D93 /* LZAlbumVC.m in Sources */,
 				700C08C81AF008D000A14D93 /* XHPathCover.m in Sources */,
+				70BEDBDF1B33F0E1004A1D39 /* LZComment.m in Sources */,
 				700C08BD1AF008D000A14D93 /* LZAlbumLikesCommentsView.m in Sources */,
 				700C08BC1AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m in Sources */,
 				700C08B91AF008D000A14D93 /* LZBaseTC.m in Sources */,
 				700C08C91AF008D000A14D93 /* XHSoundManager.m in Sources */,
 				700C08A81AF008D000A14D93 /* LZEntryForm.m in Sources */,
-				700C08A71AF008D000A14D93 /* AVUser+MCCustomUser.m in Sources */,
 				700C08A91AF008D000A14D93 /* LZLoginForm.m in Sources */,
 				700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */,
 				700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */,
+				70BEDBDE1B33F0E1004A1D39 /* LCAlbum.m in Sources */,
 				700C08BB1AF008D000A14D93 /* LZEntryFormController.m in Sources */,
 				700C08A61AF008D000A14D93 /* LZAlbumManager.m in Sources */,
 				700C089E1AF008D000A14D93 /* LZAlbumCreateVC.m in Sources */,
 				700C08CE1AF008D000A14D93 /* XHPhotographyHelper.m in Sources */,
 				700C08BA1AF008D000A14D93 /* LZBaseVC.m in Sources */,
 				700C08C21AF008D000A14D93 /* LZAlbumTableViewCell.m in Sources */,
-				700C08AB1AF008D000A14D93 /* LCAlbum.m in Sources */,
-				700C08AD1AF008D000A14D93 /* LZComment.m in Sources */,
 				700C08CA1AF008D000A14D93 /* XHWaterDropRefresh.m in Sources */,
 				700C08AA1AF008D000A14D93 /* LZRegisterForm.m in Sources */,
 				700C08A51AF008D000A14D93 /* main.m in Sources */,
 				700C08AC1AF008D000A14D93 /* LZAlbum.m in Sources */,
+				70BEDBDD1B33F0E1004A1D39 /* AVUser+MCCustomUser.m in Sources */,
 				700C08BE1AF008D000A14D93 /* LZAlbumOperationView.m in Sources */,
 				700C08A11AF008D000A14D93 /* AppDelegate.m in Sources */,
 				700C08C01AF008D000A14D93 /* LZAlbumReplyView.m in Sources */,

@@ -11,6 +11,8 @@
 
 @interface LZAlbumManager : NSObject
 
++(LZAlbumManager*)manager;
+
 -(void)createAlbumWithText:(NSString*)text photos:(NSArray*)photos error:(NSError**)error;
 
 -(void)findAlbumWithBlock:(AVArrayResultBlock)block;

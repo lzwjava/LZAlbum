@@ -11,12 +11,12 @@
 @implementation LZAlbumManager
 
 +(LZAlbumManager*)manager{
-    static LZAlbumManager* feedManager;
+    static LZAlbumManager* albumManager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        feedManager=[[LZAlbumManager alloc] init];
+        albumManager=[[LZAlbumManager alloc] init];
     });
-    return feedManager;
+    return albumManager;
 }
 
 -(void)createAlbumWithText:(NSString*)text photos:(NSArray*)photos error:(NSError**)error{
