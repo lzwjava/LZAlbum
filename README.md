@@ -3,6 +3,12 @@
 
 ![lzalbum](https://cloud.githubusercontent.com/assets/5022872/7377560/c02f5838-ee19-11e4-8817-df41c63311d0.gif)
 
+# 运行
+```
+   pod install -no-repo-update
+   open LZAlbum.xcworkspace
+```
+
 # About
 
 UI 界面大量借鉴了 [MessageDisplayKit](https://github.com/xhzengAIB/MessageDisplayKit)，数据放在了 LeanCloud 上，一并表示感谢。
