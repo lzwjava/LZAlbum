@@ -13,7 +13,7 @@
    open LZAlbum.xcworkspace
 ```
 
-# About
+# Credit
 
 UI 界面大量借鉴了 [MessageDisplayKit](https://github.com/xhzengAIB/MessageDisplayKit)，数据放在了 LeanCloud 上，一并表示感谢。
 
