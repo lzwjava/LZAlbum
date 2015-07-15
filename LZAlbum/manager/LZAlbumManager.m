@@ -26,7 +26,7 @@
     NSMutableArray* photoFiles=[NSMutableArray array];
     NSError* theError;
     for(UIImage* photo in photos){
-        AVFile* photoFile=[AVFile fileWithData:UIImageJPEGRepresentation(photo, 0.8)];
+        AVFile* photoFile=[AVFile fileWithData:UIImageJPEGRepresentation(photo, 0.6)];
         [photoFile save:&theError];
         if(theError==nil){
             [photoFiles addObject:photoFile];

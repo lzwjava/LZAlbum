@@ -24,6 +24,7 @@
     [AVOSCloud setApplicationId:@"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e" clientKey:@"j9de7xoza1gbvkbp0b6qudz10s9lkwsxqll2nvwrjfty3a58"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [AVOSCloud setLastModifyEnabled:YES];
+    [[AVInstallation currentInstallation] saveInBackground];
     
 #ifdef DEBUG
     [AVAnalytics setAnalyticsEnabled:NO];
