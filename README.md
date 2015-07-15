@@ -3,13 +3,17 @@
 
 ![lzalbum](https://cloud.githubusercontent.com/assets/5022872/7377560/c02f5838-ee19-11e4-8817-df41c63311d0.gif)
 
+# Support
+
+如果在使用过程中有任何问题，请提 [issue](https://github.com/lzwjava/LZAlbum/issues) ，我会在 Github 上给予帮助。
+
 # Run
 ```
    pod install --no-repo-update
    open LZAlbum.xcworkspace
 ```
 
-# About
+# Credit
 
 UI 界面大量借鉴了 [MessageDisplayKit](https://github.com/xhzengAIB/MessageDisplayKit)，数据放在了 LeanCloud 上，一并表示感谢。
 
@@ -23,10 +27,6 @@ UI 界面大量借鉴了 [MessageDisplayKit](https://github.com/xhzengAIB/Messag
 # Document
 
 [相关文档](https://leancloud.cn/docs/ios_os_x_guide.html)
-
-# Support
-
-请提 [issue](https://github.com/lzwjava/LZAlbum/issues) 。
 
 # License
 MIT
