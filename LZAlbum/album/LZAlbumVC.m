@@ -79,8 +79,10 @@
     }
     album.albumSharePhotos=photoUrls;
     NSMutableArray* digNames=[NSMutableArray array];
-    for(AVUser* digUser in lcAlbum.digUsers){
-        [digNames addObject:digUser.username];
+    for(AVUser *digUser in lcAlbum.digUsers){
+        if ([digUser respondsToSelector:@selector(username)]) {
+            [digNames addObject:digUser.username];
+        }
     }
     album.albumShareLikes=digNames;
     NSMutableArray* albumComments=[NSMutableArray array];

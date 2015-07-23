@@ -3,11 +3,11 @@
 
 target 'LZAlbum' do
     
-    pod 'AVOSCloud', '~> 3.1.2.4'
-    pod 'MBProgressHUD', '~> 0.9.1'
-    pod 'SDWebImage', '~> 3.7.2'
-    pod 'DateTools', '~> 1.5.0'
-    pod 'DWTagList', '~> 0.0.7'
-    pod 'FXForms', '~> 1.2.13'
+    pod 'AVOSCloud', '3.1.2.6'
+    pod 'MBProgressHUD', '0.9.1'
+    pod 'SDWebImage', '3.7.2'
+    pod 'DateTools', '1.5.0'
+    pod 'DWTagList', '0.0.7'
+    pod 'FXForms', '1.2.13'
     
 end
