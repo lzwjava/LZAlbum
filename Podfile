@@ -3,7 +3,7 @@
 
 target 'LZAlbum' do
     
-    pod 'AVOSCloud', '3.1.2.6'
+    pod 'AVOSCloud', '3.1.2.8'
     pod 'MBProgressHUD', '0.9.1'
     pod 'SDWebImage', '3.7.2'
     pod 'DateTools', '1.5.0'
