@@ -23,7 +23,7 @@ UI 界面大量借鉴了 [MessageDisplayKit](https://github.com/xhzengAIB/Messag
 
 用公共账号登录 https://leancloud.cn ，账号/密码：leancloud@163.com/Public123 ，选择应用 LCAlbum 即可查看表结构。  
 **注意 请不要更改后台数据，查看就好了。否则可能造成客户端崩溃**   
-**注意 这个不是这个应用登录的账号，而是 LeanCloud 后台的账号。应用登录的账号，先在注册界面注册一个即可。**  
+**注意 上面的账号密码不是这个应用登录的账号，而是 LeanCloud 后台的账号。应用登录的账号，先在注册界面注册一个即可。**  
 
 # Document
 
