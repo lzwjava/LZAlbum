@@ -27,16 +27,7 @@
     NSError* theError;
     for(UIImage* photo in photos){
         AVFile* photoFile=[AVFile fileWithData:UIImageJPEGRepresentation(photo, 0.6)];
-        [photoFile save:&theError];
-        if(theError==nil){
-            [photoFiles addObject:photoFile];
-        }else{
-            *error=theError;
-            for(AVFile* file in photoFiles){
-                [file deleteInBackground];
-            }
-            return;
-        }
+        [photoFiles addObject:photoFile];
     }
     AVUser* user=[AVUser currentUser];
     LCAlbum* album=[LCAlbum object];
@@ -58,7 +49,8 @@
     [q includeKey:KEY_CREATOR];
     [q includeKey:@"comments.commentUser"];
     [q includeKey:@"comments.toUser"];
-    [q whereKey:KEY_IS_DEL equalTo:@0];
+    [q setLimit:50];
+    [q whereKey:KEY_IS_DEL equalTo:@(NO)];
     [q setCachePolicy:kAVCachePolicyNetworkElseCache];
     [q findObjectsInBackgroundWithBlock:block];
 }
