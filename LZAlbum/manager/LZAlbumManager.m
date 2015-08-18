@@ -37,6 +37,7 @@
     album.isDel=NO;
     album.digUsers=[NSArray array];
     album.comments=[NSArray array];
+    // 同时保存了 photoFiles
     [album save:&theError];
     *error=theError;
 }
