@@ -1,13 +1,13 @@
 //
 //  MCMacros.h
-//  ClassNet
+//  LZAlbum
 //
 //  Created by lzw on 15/3/26.
 //  Copyright (c) 2015年 lzw. All rights reserved.
 //
 
-#ifndef ClassNet_MCMacros_h
-#define ClassNet_MCMacros_h
+#ifndef LZAlbum_MCMacros_h
+#define LZAlbum_MCMacros_h
 
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);

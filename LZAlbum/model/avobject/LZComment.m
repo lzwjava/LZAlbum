@@ -1,6 +1,6 @@
 //
 //  MCComment.m
-//  ClassNet
+//  LZAlbum
 //
 //  Created by wangyuansong on 15/3/12.
 //  Copyright (c) 2015年 lzw. All rights reserved.

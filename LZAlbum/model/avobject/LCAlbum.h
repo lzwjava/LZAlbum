@@ -1,6 +1,6 @@
 //
 //  MCFeed.h
-//  ClassNet
+//  LZAlbum
 //
 //  Created by wangyuansong on 15/3/11.
 //  Copyright (c) 2015年 lzw. All rights reserved.

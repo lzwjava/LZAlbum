@@ -1,6 +1,6 @@
 //
 //  MCAlbumLikesCommentsView.h
-//  ClassNet
+//  LZAlbum
 //
 //  Created by lzw on 15/3/28.
 //  Copyright (c) 2015年 lzw. All rights reserved.
