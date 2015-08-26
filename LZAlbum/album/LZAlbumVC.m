@@ -45,6 +45,7 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"album_add_photo"] style:UIBarButtonItemStylePlain target:self action:@selector(onAddAlbumButtonClicked)];
     self.tableView.tableHeaderView=self.albumHeaderPathCover;
     [self refresh];
+//    [[LZAlbumManager manager] deleteUnusedFiles];
 }
 
 -(void)refresh{

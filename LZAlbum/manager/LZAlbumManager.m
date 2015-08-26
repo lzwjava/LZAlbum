@@ -92,4 +92,45 @@
     }];
 }
 
+- (BOOL)file:(AVObject *)file existsInAlbums:(NSArray *)albums {
+    for (LCAlbum *album in albums) {
+        for (AVFile *photo in album.albumPhotos) {
+            if ([photo.objectId isEqualToString:file.objectId]) {
+                return YES;
+            }
+        }
+    }
+    return NO;
+}
+
+// 数据维护
+- (void)deleteUnusedFiles {
+    AVQuery *query = [LCAlbum query];
+    [query includeKey:KEY_ALBUM_PHOTOS];
+    query.limit = 1000;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *albums, NSError *error) {
+        if (!error) {
+            AVQuery *query = [AVQuery queryWithClassName:@"_File"];
+            [query orderByAscending:@"createdAt"];
+            query.limit = 1000;
+            [query findObjectsInBackgroundWithBlock:^(NSArray *files, NSError *error) {
+                if (!error) {
+                    NSMutableArray *toDeletes = [NSMutableArray array];
+                    for (AVObject *file in files) {
+                        if(![self file:file existsInAlbums:albums]) {
+                            NSLog(@"file not exists will delete");
+                            [toDeletes addObject:file];
+                        } else {
+                            NSLog(@"file exists do not delete");
+                        };
+                    }
+                    [AVObject deleteAllInBackground:toDeletes block:^(BOOL succeeded, NSError *error) {
+                        NSLog(@"deleted, error %@", error);
+                    }];
+                }
+            }];
+        }
+    }];
+}
+
 @end

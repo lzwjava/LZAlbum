@@ -21,4 +21,6 @@
 
 -(void)digOrCancelDigOfAlbum:(LCAlbum*)album block:(AVBooleanResultBlock)block;
 
+- (void)deleteUnusedFiles;
+
 @end
