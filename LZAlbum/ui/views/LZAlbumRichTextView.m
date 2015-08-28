@@ -15,7 +15,7 @@
 #import <NSDate+DateTools.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface LZAlbumRichTextView()<UICollectionViewDataSource,UICollectionViewDelegate,MCAlbumLikesCommentsViewDelegate>
+@interface LZAlbumRichTextView()<UICollectionViewDataSource,UICollectionViewDelegate,MCAlbumLikesCommentsViewDelegate, XHImageViewerDelegate>
 
 @property (nonatomic,strong) UIImageView* avatarImageView;
 
@@ -30,6 +30,10 @@
 @property (nonatomic,strong) UIButton* commentButton;
 
 @property (nonatomic,strong) LZAlbumLikesCommentsView* likesCommentsView;
+
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+
+@property (nonatomic, strong) UIActivityIndicatorView *imageLoadingIndicator;
 
 @end
 
@@ -166,6 +170,18 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     return _likesCommentsView;
 }
 
+- (UIActivityIndicatorView *)imageLoadingIndicator {
+    if (_imageLoadingIndicator == nil) {
+        _imageLoadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        _imageLoadingIndicator.center = self.window.center;
+        _imageLoadingIndicator.hidesWhenStopped = YES;
+        _imageLoadingIndicator.hidden = NO;
+        [self.window addSubview:_imageLoadingIndicator];
+    }
+    [self.window bringSubviewToFront:_imageLoadingIndicator];
+    return _imageLoadingIndicator;
+}
+
 -(void)setAlbum:(LZAlbum *)album{
     _album=album;
     self.usernameLabel.text=_album.username;
@@ -236,12 +252,15 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     if(photoCell==nil){
         photoCell=[[LZAlbumPhotoCollectionViewCell alloc] initWithFrame:CGRectMake(0, 0, kLZAlbumPhotoSize, kLZAlbumPhotoSize)];
     }
-    [photoCell.photoImageView setImageWithURL:[NSURL URLWithString:self.album.albumSharePhotos[indexPath.row]]];
+    LZPhoto *photo = self.album.albumSharePhotos[indexPath.row];
+    [photoCell.photoImageView sd_setImageWithURL:[NSURL URLWithString:photo.actualThumbnailUrl]];
     photoCell.indexPath=indexPath;
     return photoCell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedIndexPath = indexPath;
+    
     LZAlbumPhotoCollectionViewCell* photoCell=(LZAlbumPhotoCollectionViewCell*)[self.shareCollectionView cellForItemAtIndexPath:indexPath];
     
     NSArray* visibleCells=self.shareCollectionView.visibleCells;
@@ -253,7 +272,22 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
         [imageViews addObject:cell.photoImageView];
     }];
     XHImageViewer* imageViewer=[[XHImageViewer alloc] init];
+    imageViewer.delegate = self;
     [imageViewer showWithImageViews:imageViews selectedView:photoCell.photoImageView];
+}
+
+#pragma mark - XHImageViewerDelegate
+
+- (void)imageViewer:(XHImageViewer *)imageViewer didShowImageView:(UIImageView *)selectedView atIndex:(NSInteger)index {
+    LZPhoto *photo = self.album.albumSharePhotos[index];
+    [self.imageLoadingIndicator startAnimating];
+    [selectedView sd_setImageWithURL:[NSURL URLWithString:photo.originUrl] placeholderImage:selectedView.image completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [self.imageLoadingIndicator stopAnimating];
+    }];
+}
+
+- (void)imageViewer:(XHImageViewer *)imageViewer willDismissWithSelectedView:(UIImageView *)selectedView {
+    [self.imageLoadingIndicator stopAnimating];
 }
 
 #pragma mark - action 

@@ -50,7 +50,7 @@
     [q includeKey:KEY_CREATOR];
     [q includeKey:@"comments.commentUser"];
     [q includeKey:@"comments.toUser"];
-    [q setLimit:50];
+    [q setLimit:100];
     [q whereKey:KEY_IS_DEL equalTo:@(NO)];
     [q setCachePolicy:kAVCachePolicyNetworkElseCache];
     [q findObjectsInBackgroundWithBlock:block];

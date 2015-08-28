@@ -11,6 +11,8 @@
 @protocol XHImageViewerDelegate <NSObject>
 
 @optional
+
+- (void)imageViewer:(XHImageViewer *)imageViewer  didShowImageView:(UIImageView*)selectedView atIndex:(NSInteger)index;
 - (void)imageViewer:(XHImageViewer *)imageViewer  willDismissWithSelectedView:(UIImageView*)selectedView;
 
 @end

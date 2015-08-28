@@ -10,7 +10,7 @@
 #import "XHViewState.h"
 #import "XHZoomingImageView.h"
 
-@interface XHImageViewer ()
+@interface XHImageViewer () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSArray *imgViews;
@@ -89,6 +89,7 @@
 }
 
 - (void)showWithSelectedView:(UIImageView *)selectedView {
+    
     [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     const NSInteger currentPage = [_imgViews indexOfObject:selectedView];
@@ -102,6 +103,7 @@
         _scrollView.showsVerticalScrollIndicator   = NO;
         _scrollView.backgroundColor = [self.backgroundColor colorWithAlphaComponent:1];
         _scrollView.alpha = 0;
+        _scrollView.delegate = self;
     }
     
     [self addSubview:_scrollView];
@@ -146,6 +148,9 @@
                              tmp.imageView = view;
                              
                              [_scrollView addSubview:tmp];
+                         }
+                         if ([self.delegate respondsToSelector:@selector(imageViewer:didShowImageView:atIndex:)]) {
+                             [self.delegate imageViewer:self didShowImageView:selectedView atIndex:currentPage];
                          }
                      }
      ];
@@ -202,6 +207,19 @@
                          [self removeFromSuperview];
                      }
      ];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    static NSInteger previousPage = 0;
+    NSInteger page = [self pageIndex];
+    if (previousPage != page) {
+        if ([self.delegate respondsToSelector:@selector(imageViewer:didShowImageView:atIndex:)]) {
+            [self.delegate imageViewer:self didShowImageView:[self currentView] atIndex:page];
+        }
+        previousPage = page;
+    }
 }
 
 #pragma mark- Gesture events

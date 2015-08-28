@@ -24,6 +24,18 @@ static const CGFloat kLZAlbumFontSize=15;
 
 @end
 
+@interface LZPhoto : NSObject
+
+@property (nonatomic, copy) NSString *thumbnailUrl;
+
+@property (nonatomic, copy) NSString *originUrl;
+
++ (instancetype)photoWithOriginUrl:(NSString *)originUrl thumbnailUrl:(NSString *)thumbnailUrl;
+
+- (NSString *)actualThumbnailUrl;
+
+@end
+
 @interface LZAlbum : NSObject
 
 @property (nonatomic,copy) NSString* username;

@@ -74,11 +74,14 @@
     AVFile* avatarFile=[lcAlbum.creator objectForKey:KEY_AVATAR];
     album.avatarUrl=avatarFile.url;
     album.albumShareContent=lcAlbum.albumContent;
-    NSMutableArray* photoUrls=[NSMutableArray array];
+    NSMutableArray* photos=[NSMutableArray array];
     for(AVFile* photoFile in lcAlbum.albumPhotos){
-        [photoUrls addObject:photoFile.url];
+        int photoSize = kLZAlbumPhotoSize * [UIScreen mainScreen].scale;
+        NSString *thumbnailUrl = [photoFile getThumbnailURLWithScaleToFit:YES width:photoSize height:photoSize];
+        LZPhoto *photo = [LZPhoto photoWithOriginUrl:photoFile.url thumbnailUrl:thumbnailUrl];
+        [photos addObject:photo];
     }
-    album.albumSharePhotos=photoUrls;
+    album.albumSharePhotos=photos;
     NSMutableArray* digNames=[NSMutableArray array];
     for(AVUser *digUser in lcAlbum.digUsers){
         if ([digUser respondsToSelector:@selector(username)]) {

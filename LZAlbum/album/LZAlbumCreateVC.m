@@ -12,7 +12,7 @@
 #import "LZAlbumPhotoCollectionViewCell.h"
 #import "AppDelegate.h"
 
-static CGFloat kLZAlbumCreateVCPhotoSize=60;
+static CGFloat kLZAlbumCreateVCPhotoSize = 60;
 
 @interface LZAlbumCreateVC ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
