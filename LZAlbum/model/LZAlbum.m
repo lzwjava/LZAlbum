@@ -27,10 +27,6 @@
 
 @end
 
-@implementation LZAlbumComment
-
-@end
-
 @implementation LZAlbum
 
 @end

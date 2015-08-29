@@ -92,7 +92,8 @@
     NSMutableArray* albumComments=[NSMutableArray array];
     for(LZComment* comment in lcAlbum.comments){
         LZAlbumComment* albumComment=[[LZAlbumComment alloc] init];
-        albumComment.commentUsername=comment.commentUsername;
+        albumComment.fromUsername = comment.commentUser.username;
+        albumComment.toUsername = comment.toUser.username;
         albumComment.commentContent=comment.commentContent;
         [albumComments addObject:albumComment];
     }
@@ -174,7 +175,7 @@
     LCAlbum* lcAlbum=self.lcAlbums[self.selectedIndexPath.row];
     AVUser* toUser;
     if(_commentSelectedIndexPath==nil){
-        toUser=lcAlbum.creator;
+        toUser = nil;
     }else{
         LZComment* comment=lcAlbum.comments[_commentSelectedIndexPath.row];
         toUser=comment.commentUser;
@@ -216,6 +217,7 @@
     LZAlbumCreateVC* albumCreateVC=[[LZAlbumCreateVC alloc] init];
     albumCreateVC.albumVC=self;
     UINavigationController* nav=[[UINavigationController alloc] initWithRootViewController:albumCreateVC];
+    nav.navigationBar.barStyle = UIBarStyleBlack;
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
@@ -253,6 +255,12 @@
 }
 
 -(void)didSelectCommentAtCellIndexPath:(NSIndexPath *)cellIndexPath commentIndexPath:(NSIndexPath *)commentIndexPath{
+    LCAlbum* lcAlbum=self.lcAlbums[cellIndexPath.row];
+    LZComment* comment=lcAlbum.comments[commentIndexPath.row];
+    if ([comment.commentUser isEqual:[AVUser currentUser]]) {
+        // Todo 显示是否删除
+        return;
+    }
     _commentSelectedIndexPath=commentIndexPath;
     _selectedIndexPath=cellIndexPath;
     [self.albumReplyView show];

@@ -12,7 +12,6 @@
 
 @dynamic album;
 @dynamic commentContent;
-@dynamic commentUsername;
 @dynamic commentUser;
 @dynamic toUser;
 

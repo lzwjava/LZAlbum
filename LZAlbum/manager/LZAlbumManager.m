@@ -8,6 +8,12 @@
 
 #import "LZAlbumManager.h"
 
+@interface LZAlbumManager()
+
+@property (nonatomic, strong) NSMutableDictionary *cachedUsers;
+
+@end
+
 @implementation LZAlbumManager
 
 +(LZAlbumManager*)manager{
@@ -17,6 +23,15 @@
         albumManager=[[LZAlbumManager alloc] init];
     });
     return albumManager;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.cachedUsers = [NSMutableDictionary dictionary];
+    }
+    return self;
 }
 
 -(void)createAlbumWithText:(NSString*)text photos:(NSArray*)photos error:(NSError**)error{
@@ -46,14 +61,91 @@
     AVQuery* q=[LCAlbum query];
     [q orderByDescending:KEY_CREATED_AT];
     [q includeKey:KEY_ALBUM_PHOTOS];
-    [q includeKey:KEY_DIG_USERS];
-    [q includeKey:KEY_CREATOR];
-    [q includeKey:@"comments.commentUser"];
-    [q includeKey:@"comments.toUser"];
+    [q includeKey:KEY_COMMENTS];
     [q setLimit:100];
     [q whereKey:KEY_IS_DEL equalTo:@(NO)];
     [q setCachePolicy:kAVCachePolicyNetworkElseCache];
-    [q findObjectsInBackgroundWithBlock:block];
+    [q findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            block(nil, error);
+        } else {
+            NSMutableSet *userIds = [NSMutableSet set];
+            [self iterateUsersInAlbums:objects block:^(AVUser *user) {
+                [userIds addObject:user.objectId];
+            }];
+            [self cacheUsersByIds:userIds block:^(BOOL succeeded, NSError *error) {
+                if (error) {
+                    block(objects, error);
+                } else {
+                    [self iterateUsersInAlbums:objects block:^(AVUser *user) {
+                        [self fillPointerUser:user];
+                    }];
+                    block(objects ,nil);
+                }
+            }];
+        }
+    }];
+}
+
+typedef void (^AVUserHandleBlock)(AVUser *user);
+
+- (void)iterateUsersInAlbums:(NSArray *)albums block:(AVUserHandleBlock)block {
+    for (LCAlbum *album in albums) {
+        if (album.creator) {
+            block(album.creator);
+        }
+        for (AVUser *digUser in album.digUsers) {
+            block(digUser);
+        }
+        for (LZComment *comment in album.comments) {
+            if (comment.commentUser) {
+                block(comment.commentUser);
+            }
+            if (comment.toUser) {
+                block(comment.toUser);
+            }
+        }
+    }
+}
+
+- (void)fillPointerUser:(AVUser *)pointerUser {
+    AVUser *fullUser = [self lookUpUserById:pointerUser.objectId];
+    [pointerUser objectFromDictionary:[fullUser dictionaryForObject]];
+}
+
+#pragma mark - User Cache
+
+- (AVUser *)lookUpUserById:(NSString *)objectId {
+    return self.cachedUsers[objectId];
+}
+
+- (void)addUserToCache:(AVUser *)user {
+    self.cachedUsers[user.objectId] = user;
+}
+
+- (void)cacheUsersByIds:(NSMutableSet *)userIds block:(AVBooleanResultBlock)block {
+    NSMutableSet *uncached = [NSMutableSet set];
+    for (NSString *userId in userIds) {
+        if ([self lookUpUserById:userId] == nil) {
+            [uncached addObject:userId];
+        }
+    }
+    if (uncached.count > 0) {
+        AVQuery *query = [AVUser query];
+        [query whereKey:@"objectId" containedIn:[uncached allObjects]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (error) {
+                block(NO, error);
+            } else {
+                for (AVUser *user in objects) {
+                    [self addUserToCache:user];
+                }
+                block(YES, nil);
+            }
+        }];
+    } else {
+        block(YES, nil);
+    }
 }
 
 -(NSArray*)getObjectIds:(NSArray*)avObjects{
@@ -81,7 +173,6 @@
     comment.commentUser=user;
     comment.album=album;
     comment.toUser=toUser;
-    comment.commentUsername=user.username;
     [comment saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(error){
             block(NO,error);

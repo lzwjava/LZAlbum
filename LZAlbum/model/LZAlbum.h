@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LZAlbumComment.h"
+#import "LZMacros.h"
+
+#define LZLinkTextForegroundColor RGB(117, 135, 181)
+#define LZLinkTextHighlightColor [UIColor colorWithWhite:0.7 alpha:1]
 
 static const CGFloat kLZAlbumAvatarSpacing=15.0f;
 static const CGFloat kLZAlbumAvatarImageSize=45.0f;
@@ -15,14 +20,6 @@ static const CGFloat kLZAlbumPhotoSize=70;
 static const CGFloat kLZAlbumPhotoInset=5;
 
 static const CGFloat kLZAlbumFontSize=15;
-
-@interface LZAlbumComment : NSObject
-
-@property (nonatomic,copy) NSString* commentUsername;
-
-@property (nonatomic,copy) NSString* commentContent;
-
-@end
 
 @interface LZPhoto : NSObject
 

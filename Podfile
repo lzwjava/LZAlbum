@@ -9,5 +9,6 @@ target 'LZAlbum' do
     pod 'DateTools', '1.5.0'
     pod 'DWTagList', '0.0.7'
     pod 'FXForms', '1.2.13'
+    pod 'TTTAttributedLabel', '1.13.4'
     
 end

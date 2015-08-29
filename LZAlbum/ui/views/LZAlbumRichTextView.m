@@ -10,6 +10,7 @@
 #import "LZAlbumCollectionFlowLayout.h"
 #import "LZAlbumPhotoCollectionViewCell.h"
 #import "LZAlbumLikesCommentsView.h"
+#import "LZAlbumCommentTableViewCell.h"
 #import "LZMacros.h"
 #import "XHImageViewer.h"
 #import <NSDate+DateTools.h>
@@ -64,7 +65,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     if(photoCount==0){
         return 0;
     }
-    int row=photoCount/3+(photoCount%3 ? 1:0);
+    NSInteger row=photoCount/3+(photoCount%3 ? 1:0);
     return row*kLZAlbumPhotoSize+(row-1)*kLZAlbumPhotoInset;
 }
 

@@ -12,17 +12,10 @@
 static CGFloat kLZAlbumCommentCellUsernameWidth=22;
 static CGFloat kLZAlbumLikeViewHeight=18;
 static CGFloat kLZAlbumCommentCellHeight=16;
-static CGFloat kLZAlbumCommentLineSpacing=3;
 
 @protocol MCAlbumLikesCommentsViewDelegate <NSObject>
 
 -(void)didSelectCommentAtIndexPath:(NSIndexPath*)indexPath;
-
-@end
-
-@interface LZAlbumCommentTableViewCell : UITableViewCell
-
-+(CGFloat)calculateCellHeightWithAlbumComment:(LZAlbumComment*)albumComment fixWidth:(CGFloat)width;
 
 @end
 

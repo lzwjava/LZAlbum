@@ -9,73 +9,7 @@
 #import "LZAlbumLikesCommentsView.h"
 #import "DWTagList.h"
 #import "LZMacros.h"
-
-
-@interface LZAlbumCommentTableViewCell ()
-
-@property (nonatomic,strong) LZAlbumComment* albumComment;
-
-@property (nonatomic,strong) UILabel* commentLabel;
-
-@end
-
-@implementation LZAlbumCommentTableViewCell
-
-+(CGFloat)contentWidth{
-    return CGRectGetWidth([[UIScreen mainScreen] bounds])-3*kLZAlbumAvatarSpacing-kLZAlbumAvatarImageSize;
-}
-
-+(NSString*)textOfAlbumComment:(LZAlbumComment*)albumComment{
-    if(albumComment==nil){
-        return @"";
-    }
-    return [NSString stringWithFormat:@"%@ : %@",albumComment.commentUsername,albumComment.commentContent];
-}
-
-+(CGFloat)calculateCellHeightWithAlbumComment:(LZAlbumComment*)albumComment fixWidth:(CGFloat)width{
-    if(albumComment==nil){
-        return 0;
-    }
-    NSString* text=[[self class] textOfAlbumComment:albumComment];
-    CGRect textRect=[text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:kLZAlbumFontSize]} context:nil];
-    return textRect.size.height+kLZAlbumCommentLineSpacing;
-}
-
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if(self){
-        self.backgroundColor=[UIColor clearColor];
-        self.contentView.backgroundColor=[UIColor clearColor];
-        self.selectionStyle=UITableViewCellSelectionStyleNone;
-        [self.contentView addSubview:self.commentLabel];
-    }
-    return self;
-}
-
--(void)layoutSubviews{
-    [super layoutSubviews];
-    CGRect commentFrame=self.commentLabel.frame;
-    commentFrame.size.height=[[self class] calculateCellHeightWithAlbumComment:_albumComment fixWidth:[[self class] contentWidth]];
-    self.commentLabel.frame=commentFrame;
-}
-
--(void)setupItem:(LZAlbumComment*)item atIndexPath:(NSIndexPath*)indexPath{
-    _albumComment=item;
-    NSMutableAttributedString* text=[[NSMutableAttributedString alloc] initWithString:[[self class] textOfAlbumComment:item]];
-    [text addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, item.commentUsername.length)];
-    self.commentLabel.attributedText=text;
-}
-
--(UILabel*)commentLabel{
-    if(_commentLabel==nil){
-        _commentLabel=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, [[self class] contentWidth], 10)];
-        _commentLabel.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
-        _commentLabel.numberOfLines=0;
-    }
-    return _commentLabel;
-}
-
-@end
+#import "LZAlbumCommentTableViewCell.h"
 
 static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
@@ -109,8 +43,10 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
         _likesTagList=[[DWTagList alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), CGRectGetMinY(self.likeIconView.frame), [LZAlbumCommentTableViewCell contentWidth]-CGRectGetWidth(self.likeIconView.frame), kLZAlbumLikeViewHeight)];
         _likesTagList.automaticResize=NO;
         _likesTagList.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
-        _likesTagList.textColor=[UIColor blueColor];
+        _likesTagList.textColor = LZLinkTextForegroundColor;
         _likesTagList.horizontalPadding=0;
+        _likesTagList.textShadowColor = [UIColor clearColor];
+        _likesTagList.highlightedBackgroundColor = LZLinkTextHighlightColor;
         _likesTagList.labelMargin=0;
         _likesTagList.verticalPadding=1;
         [_likesTagList setTagDelegate:self];
@@ -160,8 +96,11 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
 -(void)reloadLikes{
     NSMutableArray* likeTexts=[NSMutableArray array];
-    for(int i=0;i<_likes.count;i++){
-        [likeTexts addObject:[NSString stringWithFormat:@"%@%@",i==0? @"":@", ",_likes[i]]];
+    for(int i=0;i<self.likes.count;i++){
+        if (i != 0) {
+            [likeTexts addObject:@","];
+        }
+        [likeTexts addObject:self.likes[i]];
     }
     [_likesTagList setTags:likeTexts];
 }
@@ -223,6 +162,7 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if([self.albumLikesCommentsViewDelegate respondsToSelector:@selector(didSelectCommentAtIndexPath:)]){
         [self.albumLikesCommentsViewDelegate didSelectCommentAtIndexPath:indexPath];
     }

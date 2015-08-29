@@ -18,7 +18,6 @@
 @interface LZComment : AVObject<AVSubclassing>
 
 @property (nonatomic,strong) LCAlbum* album;//关联分享
-@property (nonatomic,strong) NSString* commentUsername;
 @property (nonatomic,strong) AVUser* commentUser;//评论用户
 @property (nonatomic,strong) NSString* commentContent;//评论内容
 @property (nonatomic,strong)AVUser* toUser;//关联用户
