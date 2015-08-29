@@ -17,6 +17,8 @@
 
 -(void)findAlbumWithBlock:(AVArrayResultBlock)block;
 
+- (void)addUserToCache:(AVUser *)user;
+
 -(void)commentToUser:(AVUser*)toUser AtAlbum:(LCAlbum*)album content:(NSString*)content block:(AVBooleanResultBlock)block;
 
 -(void)digOrCancelDigOfAlbum:(LCAlbum*)album block:(AVBooleanResultBlock)block;

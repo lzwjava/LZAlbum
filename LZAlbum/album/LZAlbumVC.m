@@ -44,6 +44,7 @@
     self.title=@"朋友圈";
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"album_add_photo"] style:UIBarButtonItemStylePlain target:self action:@selector(onAddAlbumButtonClicked)];
     self.tableView.tableHeaderView=self.albumHeaderPathCover;
+    [[LZAlbumManager manager] addUserToCache:[AVUser currentUser]];
     [self refresh];
 //    [[LZAlbumManager manager] deleteUnusedFiles];
 }
