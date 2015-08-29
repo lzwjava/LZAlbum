@@ -70,7 +70,7 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 -(UIImageView*)likeIconView{
     if(_likeIconView==nil){
         _likeIconView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kLZAlbumCommentCellHeight, kLZAlbumCommentCellHeight)];
-        _likeIconView.image=[UIImage imageNamed:@"AlbumInformationLikeHL"];
+        _likeIconView.image = [UIImage imageNamed:@"AlbumInformationLikeHL"];
     }
     return _likeIconView;
 }

@@ -33,21 +33,14 @@ static NSString* photoCellIndentifier=@"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=@"新建";
-    UIBarButtonItem *logoutItem=[[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     UIBarButtonItem *createItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(createFeed)];
-    self.navigationItem.rightBarButtonItems=@[createItem,logoutItem];
+    self.navigationItem.rightBarButtonItem = createItem;
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismiss)];
     [self.photoCollectionView registerClass:[LZAlbumPhotoCollectionViewCell class] forCellWithReuseIdentifier:photoCellIndentifier];
 }
 
 -(void)dismiss{
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)logout{
-    [AVUser logOut];
-    AppDelegate *delegate =(AppDelegate *)[UIApplication sharedApplication].delegate;
-    [delegate toNextController];
 }
 
 -(void)createFeed{

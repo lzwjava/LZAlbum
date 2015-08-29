@@ -42,6 +42,11 @@
     NSError* theError;
     for(UIImage* photo in photos){
         AVFile* photoFile=[AVFile fileWithData:UIImageJPEGRepresentation(photo, 0.6)];
+        [photoFile save:&theError];
+        if (theError) {
+            *error = theError;
+            return;
+        }
         [photoFiles addObject:photoFile];
     }
     AVUser* user=[AVUser currentUser];
@@ -52,7 +57,6 @@
     album.isDel=NO;
     album.digUsers=[NSArray array];
     album.comments=[NSArray array];
-    // 同时保存了 photoFiles
     [album save:&theError];
     *error=theError;
 }
