@@ -25,10 +25,6 @@
     [super setSelected:selected animated:animated];
 }
 
-+(CGFloat)contentWidth {
-    return CGRectGetWidth([[UIScreen mainScreen] bounds])-3*kLZAlbumAvatarSpacing-kLZAlbumAvatarImageSize;
-}
-
 +(NSString*)textOfAlbumComment:(LZAlbumComment*)albumComment{
     if(albumComment==nil){
         return @"";
@@ -59,7 +55,7 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     CGRect commentFrame=self.commentLabel.frame;
-    commentFrame.size.height=[[self class] calculateCellHeightWithAlbumComment:_albumComment fixWidth:[[self class] contentWidth]];
+    commentFrame.size.height=[[self class] calculateCellHeightWithAlbumComment:_albumComment fixWidth:[LZAlbum contentWidth]];
     self.commentLabel.frame=commentFrame;
 }
 
@@ -88,7 +84,7 @@
 
 -(TTTAttributedLabel *)commentLabel{
     if(_commentLabel==nil){
-        _commentLabel=[[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, [[self class] contentWidth], 10)];
+        _commentLabel=[[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, [LZAlbum contentWidth], 10)];
         _commentLabel.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
         _commentLabel.numberOfLines=0;
         _commentLabel.textColor = [UIColor darkGrayColor];

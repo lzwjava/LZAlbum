@@ -49,4 +49,6 @@ static const CGFloat kLZAlbumFontSize=15;
 
 @property (nonatomic,copy) NSDate* albumShareTimestamp;
 
++ (CGFloat)contentWidth;
+
 @end

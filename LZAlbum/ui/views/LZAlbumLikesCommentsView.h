@@ -27,6 +27,8 @@ static CGFloat kLZAlbumCommentCellHeight=16;
 
 @property (nonatomic,strong) NSArray *comments;
 
++(CGFloat)caculateLikesCommentsViewHeightWithAlbum:(LZAlbum*)album;
+
 -(void)reloadData;
 
 @end

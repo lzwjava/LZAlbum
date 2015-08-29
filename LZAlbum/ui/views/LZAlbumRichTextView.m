@@ -46,10 +46,6 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     return  [UIFont systemFontOfSize:kLZAlbumFontSize];
 }
 
-+(CGFloat)contentWidth{
-    return CGRectGetWidth([[UIScreen mainScreen] bounds])-3*kLZAlbumAvatarSpacing-kLZAlbumAvatarImageSize;
-}
-
 +(CGFloat)getLabelHeightWithText:(NSString*)text maxWidth:(CGFloat)maxWidth font:(NSFont*)font{
     return [text boundingRectWithSize:CGSizeMake(maxWidth,CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.height;
 }
@@ -59,7 +55,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     if(text.length == 0){
         return 0;
     }
-    return [self getLabelHeightWithText:text maxWidth:[[self class] contentWidth] font:[self contentFont]];
+    return [self getLabelHeightWithText:text maxWidth:[LZAlbum contentWidth] font:[self contentFont]];
 }
 
 +(CGFloat)getPhotoCollectionViewHeightWithAlbum:(LZAlbum *)album{
@@ -69,24 +65,6 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     }
     NSInteger row=photoCount/3+(photoCount%3 ? 1:0);
     return row*kLZAlbumPhotoSize+(row-1)*kLZAlbumPhotoInset;
-}
-
-+(CGFloat)getLikesCommentsViewHeightWithAlbum:(LZAlbum*)album{
-    BOOL shouldShowLike=album.albumShareLikes.count>0;
-    BOOL shouldShowComment=album.albumShareComments.count>0;
-    CGFloat height=0;
-    if(shouldShowLike){
-        height+=kLZAlbumLikeViewHeight;
-    }
-    if(shouldShowComment){
-        CGFloat fixWidth=[[self class] contentWidth];
-        CGFloat commentsHeight=0;
-        for(LZAlbumComment* albumComment in album.albumShareComments){
-            commentsHeight+=[LZAlbumCommentTableViewCell calculateCellHeightWithAlbumComment:albumComment fixWidth:fixWidth];
-        }
-        height+=commentsHeight;
-    }
-    return height;
 }
 
 +(CGFloat)calculateRichTextHeightWithAlbum:(LZAlbum*)album {
@@ -107,7 +85,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
 	richTextHeight+=kLZAlbumCommentButtonHeight;
 	if([self shouldShowLikesCommentsViewWithAlbum:album]) {
 		richTextHeight += kLZAlbumContentLineSpacing;
-		richTextHeight += [[self class] getLikesCommentsViewHeightWithAlbum:album];
+		richTextHeight += [LZAlbumLikesCommentsView caculateLikesCommentsViewHeightWithAlbum:album];
 	}
 	richTextHeight+=kLZAlbumAvatarSpacing;
 	return richTextHeight;
@@ -138,7 +116,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
 
 -(UILabel*)usernameLabel{
     if(_usernameLabel==nil){
-        _usernameLabel=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_avatarImageView.frame)+kLZAlbumAvatarSpacing, kLZAlbumAvatarSpacing,[[self class] contentWidth] , kLZAlbumUsernameHeight)];
+        _usernameLabel=[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_avatarImageView.frame)+kLZAlbumAvatarSpacing, kLZAlbumAvatarSpacing,[LZAlbum contentWidth] , kLZAlbumUsernameHeight)];
         _usernameLabel.backgroundColor=[UIColor clearColor];
         _usernameLabel.textColor=RGB(52, 164, 254);
     }
@@ -263,7 +241,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     if ([[self class] shouldShowLikesCommentsViewWithAlbum:self.album]) {
         likesCommentsViewY += kLZAlbumContentLineSpacing;
     }
-    _likesCommentsView.frame=CGRectMake(CGRectGetMinX(_timestampLabel.frame), likesCommentsViewY , CGRectGetWidth(_contentLabel.frame), [[self class] getLikesCommentsViewHeightWithAlbum:_album]);
+    _likesCommentsView.frame=CGRectMake(CGRectGetMinX(_timestampLabel.frame), likesCommentsViewY , CGRectGetWidth(_contentLabel.frame), [LZAlbumLikesCommentsView caculateLikesCommentsViewHeightWithAlbum:_album]);
     
     CGRect frame=self.frame;
     frame.size.height = CGRectGetMaxY(_likesCommentsView.frame) + kLZAlbumAvatarSpacing;

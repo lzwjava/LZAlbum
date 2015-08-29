@@ -29,4 +29,8 @@
 
 @implementation LZAlbum
 
++ (CGFloat)contentWidth {
+    return CGRectGetWidth([[UIScreen mainScreen] bounds])-3*kLZAlbumAvatarSpacing-kLZAlbumAvatarImageSize;
+}
+
 @end

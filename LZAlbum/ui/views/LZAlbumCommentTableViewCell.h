@@ -13,7 +13,6 @@ static CGFloat kLZAlbumCommentLineSpacing=3;
 
 @interface LZAlbumCommentTableViewCell : UITableViewCell
 
-+(CGFloat)contentWidth;
 +(CGFloat)calculateCellHeightWithAlbumComment:(LZAlbumComment*)albumComment fixWidth:(CGFloat)width;
 
 -(void)setupItem:(LZAlbumComment*)item atIndexPath:(NSIndexPath*)indexPath;

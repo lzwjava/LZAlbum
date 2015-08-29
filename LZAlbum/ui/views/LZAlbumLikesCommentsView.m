@@ -24,6 +24,24 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
 @implementation LZAlbumLikesCommentsView
 
++ (CGFloat)caculateLikesCommentsViewHeightWithAlbum:(LZAlbum*)album {
+    BOOL shouldShowLike=album.albumShareLikes.count>0;
+    BOOL shouldShowComment=album.albumShareComments.count>0;
+    CGFloat height=0;
+    if(shouldShowLike){
+        height+=kLZAlbumLikeViewHeight;
+    }
+    if(shouldShowComment){
+        CGFloat fixWidth=[LZAlbum contentWidth];
+        CGFloat commentsHeight=0;
+        for(LZAlbumComment* albumComment in album.albumShareComments){
+            commentsHeight+=[LZAlbumCommentTableViewCell calculateCellHeightWithAlbumComment:albumComment fixWidth:fixWidth];
+        }
+        height+=commentsHeight;
+    }
+    return height;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -40,7 +58,7 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
 -(DWTagList*)likesTagList{
     if(_likesTagList==nil){
-        _likesTagList=[[DWTagList alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), CGRectGetMinY(self.likeIconView.frame), [LZAlbumCommentTableViewCell contentWidth]-CGRectGetWidth(self.likeIconView.frame), kLZAlbumLikeViewHeight)];
+        _likesTagList=[[DWTagList alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), CGRectGetMinY(self.likeIconView.frame), [LZAlbum contentWidth]-CGRectGetWidth(self.likeIconView.frame), kLZAlbumLikeViewHeight)];
         _likesTagList.automaticResize=NO;
         _likesTagList.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
         _likesTagList.textColor = LZLinkTextForegroundColor;
@@ -157,7 +175,7 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     LZAlbumComment* albumComment=_comments[indexPath.row];
-    CGFloat cellHeight=[LZAlbumCommentTableViewCell calculateCellHeightWithAlbumComment:albumComment fixWidth:[LZAlbumCommentTableViewCell contentWidth]];
+    CGFloat cellHeight=[LZAlbumCommentTableViewCell calculateCellHeightWithAlbumComment:albumComment fixWidth:[LZAlbum contentWidth]];
     return cellHeight;
 }
 
