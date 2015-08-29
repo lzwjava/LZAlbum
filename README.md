@@ -1,7 +1,8 @@
 # LZAlbum
 基于 LeanCloud 的朋友圈，展示了如何在 LeanCloud 上实现一对一和一对多的关系建模。
 
-![lzalbum](https://cloud.githubusercontent.com/assets/5022872/7377560/c02f5838-ee19-11e4-8817-df41c63311d0.gif)
+![album](https://cloud.githubusercontent.com/assets/5022872/9563818/dd9588ba-4ec3-11e5-940a-3d1e84b967f0.gif)
+
 
 # Support
 
