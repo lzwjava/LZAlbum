@@ -7,16 +7,16 @@
 //
 
 #import "LZAlbumLikesCommentsView.h"
-#import "DWTagList.h"
 #import "LZMacros.h"
 #import "LZAlbumCommentTableViewCell.h"
+#import <TTTAttributedLabel/TTTAttributedLabel.h>
 
 static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
-@interface LZAlbumLikesCommentsView ()<UITableViewDataSource,UITableViewDelegate,DWTagListDelegate>
+@interface LZAlbumLikesCommentsView ()<UITableViewDataSource,UITableViewDelegate,TTTAttributedLabelDelegate>
 
 @property (nonatomic,strong) UIView *likeContainerView;
-@property (nonatomic,strong) DWTagList* likesTagList;
+@property (nonatomic,strong) TTTAttributedLabel* likesLabel;
 @property (nonatomic,strong) UIImageView *likeIconView;
 @property (nonatomic,strong) UITableView *commentTableView;
 
@@ -40,10 +40,11 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
     if (![self shouldShowLikesViewWithAlbum:album]) {
         return 0;
     }
-    DWTagList *mockTagList = [[DWTagList alloc] initWithFrame:CGRectMake(0, 0, [LZAlbum contentWidth], 0)];
-    [[self class] customLikesTagList:mockTagList];
-    [[self class] reloadLikesWithAlbum:album tagList:mockTagList];
-    return [mockTagList fittedSize].height;
+    TTTAttributedLabel *mockLikesLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, [LZAlbum contentWidth] - kLZAlbumCommentIconHeight, CGFLOAT_MAX)];
+    [[self class] customLikesLabel:mockLikesLabel];
+    [[self class] reloadLikesWithAlbum:album likesLabel:mockLikesLabel];
+    [mockLikesLabel sizeToFit];
+    return CGRectGetHeight(mockLikesLabel.frame);
 }
 
 + (CGFloat)caculateCommentsViewHeightWithAlbum:(LZAlbum *)album {
@@ -88,28 +89,22 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
     return _likeIconView;
 }
 
--(DWTagList*)likesTagList{
-    if(_likesTagList==nil){
-        _likesTagList=[[DWTagList alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), 0, [LZAlbum contentWidth]-CGRectGetWidth(self.likeIconView.frame), 0)];
-        _likesTagList.textColor = LZLinkTextForegroundColor;
-        _likesTagList.textShadowColor = [UIColor clearColor];
-        _likesTagList.highlightedBackgroundColor = LZLinkTextHighlightColor;
-        _likesTagList.tagDelegate = self;
-        [_likesTagList setTagBackgroundColor:[UIColor clearColor]];
-        [[self class] customLikesTagList:_likesTagList];
+-(TTTAttributedLabel *)likesLabel{
+    if(_likesLabel==nil){
+        _likesLabel= [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), 0, [LZAlbum contentWidth] - CGRectGetWidth(self.likeIconView.frame), CGFLOAT_MAX)];
+        _likesLabel.linkAttributes = @{(id)NSUnderlineStyleAttributeName:@(NO), (id)kCTForegroundColorAttributeName:(id)LZLinkTextForegroundColor.CGColor};
+        _likesLabel.activeLinkAttributes = @{(id)kTTTBackgroundFillColorAttributeName:(id)LZLinkTextHighlightColor.CGColor};
+        _likesLabel.textColor = [UIColor darkGrayColor];
+        _likesLabel.delegate = self;
+        [[self class] customLikesLabel:_likesLabel];
     }
-    return _likesTagList;
+    return _likesLabel;
 }
 
-+ (void)customLikesTagList:(DWTagList *)tagList {
-    tagList.horizontalPadding=0;
-    tagList.automaticResize = YES;
-    tagList.bottomMargin = 0;
-    tagList.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
-    tagList.labelMargin=0;
-    tagList.verticalPadding = 0;
-    tagList.cornerRadius = 0;
-    tagList.borderWidth = 0;
++ (void)customLikesLabel:(TTTAttributedLabel *)likesLabel {
+    likesLabel.font = [UIFont systemFontOfSize:kLZAlbumFontSize];
+    likesLabel.numberOfLines = 0;
+    likesLabel.lineBreakMode = NSLineBreakByWordWrapping;
 }
 
 -(UIView*)likeContainerView{
@@ -117,7 +112,7 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
         _likeContainerView=[[UIView alloc] initWithFrame:CGRectZero];
         _likeContainerView.autoresizesSubviews=YES;
         [_likeContainerView addSubview:self.likeIconView];
-        [_likeContainerView addSubview:self.likesTagList];
+        [_likeContainerView addSubview:self.likesLabel];
         _likeContainerView.clipsToBounds = YES;
     }
     return _likeContainerView;
@@ -140,26 +135,35 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
 #pragma mark -
 
-- (void)selectedTag:(NSString *)tagName tagIndex:(NSInteger)tagIndex{
+- (void)attributedLabel:(TTTAttributedLabel *)label
+   didSelectLinkWithURL:(NSURL *)url {
     DLog();
 }
 
 - (void)setAlbum:(LZAlbum *)album {
     _album = album;
-    [[self class] reloadLikesWithAlbum:album tagList:self.likesTagList];
+    [[self class] reloadLikesWithAlbum:album likesLabel:self.likesLabel];
     [self.commentTableView reloadData];
     [self setNeedsLayout];
 }
 
-+ (void)reloadLikesWithAlbum:(LZAlbum *)album tagList:(DWTagList *)tagList{
-    NSMutableArray* likeTexts=[NSMutableArray array];
++ (void)reloadLikesWithAlbum:(LZAlbum *)album likesLabel:(TTTAttributedLabel *)likesLabel {
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] init];
+    NSMutableArray *locations = [NSMutableArray array];
     for(int i=0;i<album.albumShareLikes.count;i++){
         if (i != 0) {
-            [likeTexts addObject:@","];
+            [attrString appendAttributedString:[[NSAttributedString alloc] initWithString:@","]];
         }
-        [likeTexts addObject:album.albumShareLikes[i]];
+        [locations addObject:@(attrString.length)];
+        [attrString appendAttributedString:[[NSAttributedString alloc] initWithString:album.albumShareLikes[i] attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}]];
     }
-    [tagList setTags:likeTexts];
+    [likesLabel setText:attrString afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+        return mutableAttributedString;
+    }];
+    for (NSInteger i = 0; i < locations.count; i ++) {
+        NSString *like = album.albumShareLikes[i];
+        [likesLabel addLinkToURL:[NSURL URLWithString:like] withRange:NSMakeRange([locations[i] intValue], like.length)];
+    }
 }
 
 - (void)layoutSubviews {
@@ -173,6 +177,10 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
     }
     
     CGFloat likesViewHeight = [[self class] caculateLikesViewHeightWithAlbum:self.album];
+    CGRect likesLabelFrame = self.likesLabel.frame;
+    likesLabelFrame.size.height = likesViewHeight;
+    self.likesLabel.frame = likesLabelFrame;
+    
     CGRect likeContainerFrame=self.likeContainerView.frame;
     likeContainerFrame.size=CGSizeMake(CGRectGetWidth(self.bounds), likesViewHeight);
     self.likeContainerView.frame=likeContainerFrame;

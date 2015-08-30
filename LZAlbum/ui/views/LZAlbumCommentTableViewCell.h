@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "LZAlbum.h"
 
-static CGFloat kLZAlbumCommentLineSpacing=3;
-
 @interface LZAlbumCommentTableViewCell : UITableViewCell
 
 +(CGFloat)calculateCellHeightWithAlbumComment:(LZAlbumComment*)albumComment fixWidth:(CGFloat)width;

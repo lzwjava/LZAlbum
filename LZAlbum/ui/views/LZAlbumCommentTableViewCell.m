@@ -37,8 +37,12 @@
         return 0;
     }
     NSString* text=[albumComment fullCommentText];
-    CGRect textRect=[text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:kLZAlbumFontSize]} context:nil];
-    return textRect.size.height+kLZAlbumCommentLineSpacing;
+    TTTAttributedLabel *mockLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, [LZAlbum contentWidth], CGFLOAT_MAX)];
+    [[self class] customCommentLabel:mockLabel];
+    mockLabel.text = text;
+    [mockLabel sizeToFit];
+    CGFloat height = mockLabel.frame.size.height;
+    return height;
 }
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -85,15 +89,19 @@
 -(TTTAttributedLabel *)commentLabel{
     if(_commentLabel==nil){
         _commentLabel=[[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, [LZAlbum contentWidth], 10)];
-        _commentLabel.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
-        _commentLabel.numberOfLines=0;
         _commentLabel.textColor = [UIColor darkGrayColor];
-        _commentLabel.lineBreakMode = NSLineBreakByWordWrapping;
         _commentLabel.linkAttributes = @{(id)NSUnderlineStyleAttributeName:@(NO), (id)kCTForegroundColorAttributeName:(id)LZLinkTextForegroundColor.CGColor};
         _commentLabel.activeLinkAttributes = @{(id)kTTTBackgroundFillColorAttributeName:(id)LZLinkTextHighlightColor.CGColor};
         _commentLabel.delegate = self;
+        [[self class] customCommentLabel:_commentLabel];
     }
     return _commentLabel;
+}
+
++ (void)customCommentLabel:(TTTAttributedLabel *)label {
+    label.font=[UIFont systemFontOfSize:kLZAlbumFontSize];
+    label.numberOfLines = 0;
+    label.lineBreakMode = NSLineBreakByWordWrapping;
 }
 
 - (void)attributedLabel:(TTTAttributedLabel *)label

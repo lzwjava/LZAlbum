@@ -7,7 +7,6 @@ target 'LZAlbum' do
     pod 'MBProgressHUD', '0.9.1'
     pod 'SDWebImage', '3.7.2'
     pod 'DateTools', '1.5.0'
-    pod 'DWTagList', '0.0.7'
     pod 'FXForms', '1.2.13'
     pod 'TTTAttributedLabel', '1.13.4'
     
