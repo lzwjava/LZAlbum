@@ -80,9 +80,17 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
 
 #pragma mark - Propertys
 
+-(UIImageView*)likeIconView{
+    if(_likeIconView==nil){
+        _likeIconView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 2, kLZAlbumCommentIconHeight, kLZAlbumCommentIconHeight)];
+        _likeIconView.image = [UIImage imageNamed:@"AlbumInformationLikeHL"];
+    }
+    return _likeIconView;
+}
+
 -(DWTagList*)likesTagList{
     if(_likesTagList==nil){
-        _likesTagList=[[DWTagList alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), CGRectGetMinY(self.likeIconView.frame), [LZAlbum contentWidth]-CGRectGetWidth(self.likeIconView.frame), 0)];
+        _likesTagList=[[DWTagList alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.likeIconView.frame), 0, [LZAlbum contentWidth]-CGRectGetWidth(self.likeIconView.frame), 0)];
         _likesTagList.textColor = LZLinkTextForegroundColor;
         _likesTagList.textShadowColor = [UIColor clearColor];
         _likesTagList.highlightedBackgroundColor = LZLinkTextHighlightColor;
@@ -113,14 +121,6 @@ static NSString* kLZAlbumCommentCellIndetifier=@"albumCommentCell";
         _likeContainerView.clipsToBounds = YES;
     }
     return _likeContainerView;
-}
-
--(UIImageView*)likeIconView{
-    if(_likeIconView==nil){
-        _likeIconView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kLZAlbumCommentIconHeight, kLZAlbumCommentIconHeight)];
-        _likeIconView.image = [UIImage imageNamed:@"AlbumInformationLikeHL"];
-    }
-    return _likeIconView;
 }
 
 -(UITableView*)commentTableView{

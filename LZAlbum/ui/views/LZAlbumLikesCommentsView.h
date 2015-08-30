@@ -10,7 +10,7 @@
 #import "LZAlbum.h"
 
 static CGFloat kLZAlbumCommentCellUsernameWidth=22;
-static CGFloat kLZAlbumCommentIconHeight=16;
+static CGFloat kLZAlbumCommentIconHeight = 16;
 
 @protocol MCAlbumLikesCommentsViewDelegate <NSObject>
 
