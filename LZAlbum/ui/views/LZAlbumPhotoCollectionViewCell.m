@@ -29,6 +29,7 @@
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];    
     self.photoImageView.image = nil;
     self.indexPath = nil;
 }

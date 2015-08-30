@@ -110,6 +110,7 @@
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
     self.commentLabel.text = nil;
 }
 

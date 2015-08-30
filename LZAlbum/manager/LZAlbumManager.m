@@ -204,7 +204,7 @@ typedef void (^AVUserHandleBlock)(AVUser *user);
     return NO;
 }
 
-// 数据维护，删掉没有出现在朋友圈里的文件
+// 数据维护，删掉没有出现在朋友圈里的文件，这里会把头像文件也删除掉，TODO FIX
 - (void)deleteUnusedFiles {
     AVQuery *query = [LCAlbum query];
     [query includeKey:KEY_ALBUM_PHOTOS];
