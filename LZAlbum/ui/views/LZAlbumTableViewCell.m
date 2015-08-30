@@ -72,4 +72,8 @@
     }
 }
 
+- (void)prepareForReuse {
+    self.albumRichTextView.album = nil;
+}
+
 @end

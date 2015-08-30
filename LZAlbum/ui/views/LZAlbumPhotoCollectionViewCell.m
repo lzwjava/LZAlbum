@@ -28,4 +28,9 @@
     return self;
 }
 
+- (void)prepareForReuse {
+    self.photoImageView.image = nil;
+    self.indexPath = nil;
+}
+
 @end

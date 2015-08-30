@@ -10,8 +10,7 @@
 #import "LZAlbum.h"
 
 static CGFloat kLZAlbumCommentCellUsernameWidth=22;
-static CGFloat kLZAlbumLikeViewHeight=18;
-static CGFloat kLZAlbumCommentCellHeight=16;
+static CGFloat kLZAlbumCommentIconHeight=16;
 
 @protocol MCAlbumLikesCommentsViewDelegate <NSObject>
 
@@ -23,12 +22,9 @@ static CGFloat kLZAlbumCommentCellHeight=16;
 
 @property (nonatomic,strong) id<MCAlbumLikesCommentsViewDelegate> albumLikesCommentsViewDelegate;
 
-@property (nonatomic,strong) NSArray *likes;
+@property (nonatomic, strong) LZAlbum *album;
 
-@property (nonatomic,strong) NSArray *comments;
-
-+(CGFloat)caculateLikesCommentsViewHeightWithAlbum:(LZAlbum*)album;
-
--(void)reloadData;
++ (BOOL)shouldShowLikesCommentsViewWithAlbum:(LZAlbum *)album;
++ (CGFloat)caculateLikesCommentsViewHeightWithAlbum:(LZAlbum*)album;
 
 @end

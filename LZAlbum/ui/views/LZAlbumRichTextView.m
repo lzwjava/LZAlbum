@@ -83,7 +83,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
 	}
 	richTextHeight+=kLZAlbumContentLineSpacing;
 	richTextHeight+=kLZAlbumCommentButtonHeight;
-	if([self shouldShowLikesCommentsViewWithAlbum:album]) {
+	if([LZAlbumLikesCommentsView shouldShowLikesCommentsViewWithAlbum:album]) {
 		richTextHeight += kLZAlbumContentLineSpacing;
 		richTextHeight += [LZAlbumLikesCommentsView caculateLikesCommentsViewHeightWithAlbum:album];
 	}
@@ -99,10 +99,6 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
 
 + (BOOL)shouldShowPhotoCollectionViewWithAlbum:(LZAlbum *)album {
     return album.albumSharePhotos.count > 0;
-}
-
-+ (BOOL)shouldShowLikesCommentsViewWithAlbum:(LZAlbum *)album {
-    return album.albumShareLikes.count > 0 || album.albumShareComments.count > 0;
 }
 
 #pragma mark - View init
@@ -191,9 +187,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     [self.shareCollectionView reloadData];
     self.timestampLabel.text=_album.albumShareTimestamp.timeAgoSinceNow;
     
-    self.likesCommentsView.likes=album.albumShareLikes;
-    self.likesCommentsView.comments=album.albumShareComments;
-    [self.likesCommentsView reloadData];
+    self.likesCommentsView.album = album;
     
     [self setNeedsLayout];
 }
@@ -238,7 +232,7 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     _timestampLabel.frame=CGRectMake(CGRectGetMinX(_contentLabel.frame), CGRectGetMinY(_commentButton.frame), CGRectGetWidth(_contentLabel.frame)-kLZAlbumCommentButtonWidth, CGRectGetHeight(_commentButton.frame));
     
     CGFloat likesCommentsViewY = CGRectGetMaxY(_timestampLabel.frame);
-    if ([[self class] shouldShowLikesCommentsViewWithAlbum:self.album]) {
+    if ([LZAlbumLikesCommentsView shouldShowLikesCommentsViewWithAlbum:self.album]) {
         likesCommentsViewY += kLZAlbumContentLineSpacing;
     }
     _likesCommentsView.frame=CGRectMake(CGRectGetMinX(_timestampLabel.frame), likesCommentsViewY , CGRectGetWidth(_contentLabel.frame), [LZAlbumLikesCommentsView caculateLikesCommentsViewHeightWithAlbum:_album]);

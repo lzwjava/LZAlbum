@@ -101,4 +101,8 @@
     DLog(@"%@ clicked", url.absoluteString);
 }
 
+- (void)prepareForReuse {
+    self.commentLabel.text = nil;
+}
+
 @end
