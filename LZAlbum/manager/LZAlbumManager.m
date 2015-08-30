@@ -93,6 +93,9 @@
 
 typedef void (^AVUserHandleBlock)(AVUser *user);
 
+/*!
+ *  找出 Album 里相关的所有 User，这些 User只有 objectId，没有 username 等数据
+ */
 - (void)iterateUsersInAlbums:(NSArray *)albums block:(AVUserHandleBlock)block {
     for (LCAlbum *album in albums) {
         if (album.creator) {
@@ -112,6 +115,9 @@ typedef void (^AVUserHandleBlock)(AVUser *user);
     }
 }
 
+/*!
+ *  填充 username,createdAt 等数据
+ */
 - (void)fillPointerUser:(AVUser *)pointerUser {
     AVUser *fullUser = [self lookUpUserById:pointerUser.objectId];
     [pointerUser objectFromDictionary:[fullUser dictionaryForObject]];
