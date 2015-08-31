@@ -46,7 +46,6 @@
     self.tableView.tableHeaderView=self.albumHeaderPathCover;
     [[LZAlbumManager manager] addUserToCache:[AVUser currentUser]];
     [self refresh];
-//    [[LZAlbumManager manager] deleteUnusedFiles];
 }
 
 -(void)refresh{
