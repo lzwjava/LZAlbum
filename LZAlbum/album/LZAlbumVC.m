@@ -84,7 +84,7 @@
     album.albumSharePhotos=photos;
     NSMutableArray* digNames=[NSMutableArray array];
     for(AVUser *digUser in lcAlbum.digUsers){
-        if ([digUser respondsToSelector:@selector(username)]) {
+        if (digUser.username.length > 0) {
             [digNames addObject:digUser.username];
         }
     }
