@@ -10,7 +10,7 @@
 
 # Run
 ```
-   pod install --no-repo-update
+   pod install --no-repo-update --verbose (报错说库找不到的话，去掉 --no-repo-update)
    open LZAlbum.xcworkspace
 ```
 
