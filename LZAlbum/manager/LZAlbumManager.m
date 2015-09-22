@@ -61,6 +61,9 @@
     *error=theError;
 }
 
+/**
+ *  @discussion 因为不同朋友圈里的评论或者点赞的人很有可能重复，这里我们遍历所有的 User，然后统一缓存起来。原先这里的逻辑是很简单的，这里为了更好的性能优化了。见这个Commit：https://github.com/lzwjava/LZAlbum/commit/afa731608ecdbbd9e38ae864f04a37cd518cdbb0#diff-7d87db85844b7a3956c139f06e3e1dfbR37
+ */
 -(void)findAlbumWithBlock:(AVArrayResultBlock)block{
     AVQuery* q=[LCAlbum query];
     [q orderByDescending:KEY_CREATED_AT];
