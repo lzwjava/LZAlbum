@@ -16,17 +16,16 @@
 
 @implementation LZAlbumManager
 
-+(LZAlbumManager*)manager{
-    static LZAlbumManager* albumManager;
++ (LZAlbumManager *)manager {
+    static LZAlbumManager *albumManager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        albumManager=[[LZAlbumManager alloc] init];
+        albumManager = [[LZAlbumManager alloc] init];
     });
     return albumManager;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.cachedUsers = [NSMutableDictionary dictionary];
@@ -34,14 +33,14 @@
     return self;
 }
 
--(void)createAlbumWithText:(NSString*)text photos:(NSArray*)photos error:(NSError**)error{
-    if(text==nil){
-        text=@"";
+- (void)createAlbumWithText:(NSString *)text photos:(NSArray *)photos error:(NSError**)error {
+    if (text == nil) {
+        text = @"";
     }
-    NSMutableArray* photoFiles=[NSMutableArray array];
-    NSError* theError;
-    for(UIImage* photo in photos){
-        AVFile* photoFile=[AVFile fileWithData:UIImageJPEGRepresentation(photo, 0.6)];
+    NSMutableArray *photoFiles = [NSMutableArray array];
+    NSError *theError;
+    for (UIImage *photo in photos) {
+        AVFile *photoFile = [AVFile fileWithData:UIImageJPEGRepresentation(photo, 0.6)];
         [photoFile save:&theError];
         if (theError) {
             *error = theError;
@@ -49,23 +48,23 @@
         }
         [photoFiles addObject:photoFile];
     }
-    AVUser* user=[AVUser currentUser];
-    LCAlbum* album=[LCAlbum object];
-    album.creator=user;
-    album.albumContent=text;
-    album.albumPhotos=photoFiles;
-    album.isDel=NO;
-    album.digUsers=[NSArray array];
-    album.comments=[NSArray array];
+    AVUser *user = [AVUser currentUser];
+    LCAlbum *album = [LCAlbum object];
+    album.creator = user;
+    album.albumContent = text;
+    album.albumPhotos = photoFiles;
+    album.isDel = NO;
+    album.digUsers = [NSArray array];
+    album.comments = [NSArray array];
     [album save:&theError];
-    *error=theError;
+    *error = theError;
 }
 
 /**
  *  @discussion 因为不同朋友圈里的评论或者点赞的人很有可能重复，这里我们遍历所有的 User，然后统一缓存起来。原先这里的逻辑是很简单的，这里为了更好的性能优化了。见这个Commit：https://github.com/lzwjava/LZAlbum/commit/afa731608ecdbbd9e38ae864f04a37cd518cdbb0#diff-7d87db85844b7a3956c139f06e3e1dfbR37
  */
--(void)findAlbumWithBlock:(AVArrayResultBlock)block{
-    AVQuery* q=[LCAlbum query];
+- (void)findAlbumWithBlock:(AVArrayResultBlock)block {
+    AVQuery *q = [LCAlbum query];
     [q orderByDescending:KEY_CREATED_AT];
     [q includeKey:KEY_ALBUM_PHOTOS];
     [q includeKey:KEY_COMMENTS];
@@ -87,7 +86,7 @@
                     [self iterateUsersInAlbums:objects block:^(AVUser *user) {
                         [self fillPointerUser:user];
                     }];
-                    block(objects ,nil);
+                    block(objects, nil);
                 }
             }];
         }
@@ -161,35 +160,35 @@ typedef void (^AVUserHandleBlock)(AVUser *user);
     }
 }
 
--(NSArray*)getObjectIds:(NSArray*)avObjects{
-    NSMutableArray* objectIds=[NSMutableArray array];
-    for(AVObject* object in avObjects){
+- (NSArray *)getObjectIds:(NSArray *)avObjects {
+    NSMutableArray *objectIds = [NSMutableArray array];
+    for (AVObject *object in avObjects) {
         [objectIds addObject:object.objectId];
     }
     return objectIds;
 }
 
--(void)digOrCancelDigOfAlbum:(LCAlbum*)album block:(AVBooleanResultBlock)block{
-    AVUser* user=[AVUser currentUser];
-    if([album.digUsers containsObject:user]){
+- (void)digOrCancelDigOfAlbum:(LCAlbum *)album block:(AVBooleanResultBlock)block {
+    AVUser *user = [AVUser currentUser];
+    if ([album.digUsers containsObject:user]) {
         [album removeObject:user forKey:KEY_DIG_USERS];
-    }else{
+    } else {
         [album addObject:user forKey:KEY_DIG_USERS];
     }
     [album saveInBackgroundWithBlock:block];
 }
 
--(void)commentToUser:(AVUser*)toUser AtAlbum:(LCAlbum*)album content:(NSString*)content block:(AVBooleanResultBlock)block{
-    LZComment* comment=[LZComment object];
-    comment.commentContent=content;
-    AVUser* user=[AVUser currentUser];
-    comment.commentUser=user;
-    comment.album=album;
-    comment.toUser=toUser;
+- (void)commentToUser:(AVUser *)toUser AtAlbum:(LCAlbum *)album content:(NSString *)content block:(AVBooleanResultBlock)block {
+    LZComment *comment = [LZComment object];
+    comment.commentContent = content;
+    AVUser *user = [AVUser currentUser];
+    comment.commentUser = user;
+    comment.album = album;
+    comment.toUser = toUser;
     [comment saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(error){
-            block(NO,error);
-        }else{
+        if (error) {
+            block(NO, error);
+        } else {
             [album addObject:comment forKey:KEY_COMMENTS];
             [album saveInBackgroundWithBlock:block];
         }
@@ -221,7 +220,7 @@ typedef void (^AVUserHandleBlock)(AVUser *user);
                 if (!error) {
                     NSMutableArray *toDeletes = [NSMutableArray array];
                     for (AVObject *file in files) {
-                        if(![self file:file existsInAlbums:albums]) {
+                        if (![self file:file existsInAlbums:albums]) {
                             NSLog(@"file not exists will delete");
                             [toDeletes addObject:file];
                         } else {
