@@ -57,6 +57,7 @@
 		70BEDBDD1B33F0E1004A1D39 /* AVUser+MCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD71B33F0E1004A1D39 /* AVUser+MCCustomUser.m */; };
 		70BEDBDE1B33F0E1004A1D39 /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD91B33F0E1004A1D39 /* LCAlbum.m */; };
 		70BEDBDF1B33F0E1004A1D39 /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBDC1B33F0E1004A1D39 /* LZComment.m */; };
+		70E6FC251BE7488400F4CA8E /* LZInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6FC231BE7488400F4CA8E /* LZInputAccessoryView.m */; };
 		70FD92621B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */; };
 		70FD92651B91BE32003ECB1A /* LZAlbumComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92641B91BE32003ECB1A /* LZAlbumComment.m */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,8 @@
 		70BEDBDA1B33F0E1004A1D39 /* LZAVObjectHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAVObjectHeader.h; sourceTree = "<group>"; };
 		70BEDBDB1B33F0E1004A1D39 /* LZComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZComment.h; sourceTree = "<group>"; };
 		70BEDBDC1B33F0E1004A1D39 /* LZComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZComment.m; sourceTree = "<group>"; };
+		70E6FC231BE7488400F4CA8E /* LZInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInputAccessoryView.m; sourceTree = "<group>"; };
+		70E6FC241BE7488400F4CA8E /* LZInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInputAccessoryView.h; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FD92601B91B47C003ECB1A /* LZAlbumCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCommentTableViewCell.h; sourceTree = "<group>"; };
 		70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCommentTableViewCell.m; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 		700C08771AF008D000A14D93 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				70E6FC231BE7488400F4CA8E /* LZInputAccessoryView.m */,
+				70E6FC241BE7488400F4CA8E /* LZInputAccessoryView.h */,
 				700C08781AF008D000A14D93 /* LZAlbumCollectionFlowLayout.h */,
 				700C08791AF008D000A14D93 /* LZAlbumCollectionFlowLayout.m */,
 				700C087A1AF008D000A14D93 /* LZAlbumLikesCommentsView.h */,
@@ -541,6 +546,7 @@
 				700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */,
 				700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */,
 				70BEDBDE1B33F0E1004A1D39 /* LCAlbum.m in Sources */,
+				70E6FC251BE7488400F4CA8E /* LZInputAccessoryView.m in Sources */,
 				700C08BB1AF008D000A14D93 /* LZEntryFormController.m in Sources */,
 				700C08A61AF008D000A14D93 /* LZAlbumManager.m in Sources */,
 				700C089E1AF008D000A14D93 /* LZAlbumCreateVC.m in Sources */,

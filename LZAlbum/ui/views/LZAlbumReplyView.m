@@ -7,6 +7,7 @@
 //
 
 #import "LZAlbumReplyView.h"
+#import "LZInputAccessoryView.h"
 
 @interface LZAlbumReplyView ()<UITextFieldDelegate>
 
@@ -14,7 +15,7 @@
 
 @property (nonatomic,strong) UITextField* inputTextField;
 
-@property (nonatomic,strong) UIView* customInputAccessoryView;
+@property (nonatomic,strong) LZInputAccessoryView* customInputAccessoryView;
 
 @end
 
@@ -59,6 +60,12 @@
     if([self.textField isFirstResponder]){
         [self.textField resignFirstResponder];
     }
+    CGRect frame = self.customInputAccessoryView.keyboardViewProxy.frame;
+    CGFloat keyboardMaxH = CGRectGetHeight([UIScreen mainScreen].bounds);
+    if (self.customInputAccessoryView.keyboardViewProxy != nil && frame.origin.y != keyboardMaxH) {
+        frame.origin.y = keyboardMaxH;
+        self.customInputAccessoryView.keyboardViewProxy.frame = frame;
+    }
 }
 
 -(void)show{
@@ -80,7 +87,7 @@
 
 -(UIView*)customInputAccessoryView{
     if(_customInputAccessoryView==nil){
-        _customInputAccessoryView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 44)];
+        _customInputAccessoryView=[[LZInputAccessoryView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 44)];
         _customInputAccessoryView.backgroundColor = [UIColor colorWithWhite:0.910 alpha:1.000];
         [_customInputAccessoryView addSubview:self.inputTextField];
     }
