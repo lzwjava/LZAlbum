@@ -58,9 +58,21 @@
 		70BEDBDE1B33F0E1004A1D39 /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD91B33F0E1004A1D39 /* LCAlbum.m */; };
 		70BEDBDF1B33F0E1004A1D39 /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBDC1B33F0E1004A1D39 /* LZComment.m */; };
 		70E6FC251BE7488400F4CA8E /* LZInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6FC231BE7488400F4CA8E /* LZInputAccessoryView.m */; };
+		70ECD4FF1BF8F219001FA9A0 /* LZAlbumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ECD4FE1BF8F219001FA9A0 /* LZAlbumTests.m */; };
 		70FD92621B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */; };
 		70FD92651B91BE32003ECB1A /* LZAlbumComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92641B91BE32003ECB1A /* LZAlbumComment.m */; };
+		9532639B6F0F86AE2B7203FB /* libPods-LZAlbumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06F9AF5208389492A04461 /* libPods-LZAlbumTests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70ECD5011BF8F219001FA9A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70EBDCC01AEFCDE5005EABEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70EBDCC71AEFCDE5005EABEF;
+			remoteInfo = LZAlbum;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,12 +160,18 @@
 		70E6FC231BE7488400F4CA8E /* LZInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZInputAccessoryView.m; sourceTree = "<group>"; };
 		70E6FC241BE7488400F4CA8E /* LZInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInputAccessoryView.h; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70ECD4FC1BF8F219001FA9A0 /* LZAlbumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZAlbumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70ECD4FE1BF8F219001FA9A0 /* LZAlbumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZAlbumTests.m; sourceTree = "<group>"; };
+		70ECD5001BF8F219001FA9A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FD92601B91B47C003ECB1A /* LZAlbumCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCommentTableViewCell.h; sourceTree = "<group>"; };
 		70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCommentTableViewCell.m; sourceTree = "<group>"; };
 		70FD92631B91BE32003ECB1A /* LZAlbumComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumComment.h; sourceTree = "<group>"; };
 		70FD92641B91BE32003ECB1A /* LZAlbumComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumComment.m; sourceTree = "<group>"; };
+		727065AD2258B3498066EF44 /* Pods-LZAlbumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZAlbumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZAlbumTests/Pods-LZAlbumTests.release.xcconfig"; sourceTree = "<group>"; };
 		73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9D5B0AB9E7AADF7534422E /* Pods-LZAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum.debug.xcconfig"; sourceTree = "<group>"; };
+		BC06F9AF5208389492A04461 /* libPods-LZAlbumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZAlbumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F67FF55403DFA9AFE57EA2 /* Pods-LZAlbumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZAlbumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZAlbumTests/Pods-LZAlbumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +183,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70ECD4F91BF8F219001FA9A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9532639B6F0F86AE2B7203FB /* libPods-LZAlbumTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -173,6 +199,7 @@
 			children = (
 				12E5C7F947A8732892A25EF4 /* libPods-MCAlbum.a */,
 				73CBB0345D39F3158EB09EB3 /* libPods-LZAlbum.a */,
+				BC06F9AF5208389492A04461 /* libPods-LZAlbumTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -387,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				700C083F1AF008D000A14D93 /* LZAlbum */,
+				70ECD4FD1BF8F219001FA9A0 /* LZAlbumTests */,
 				70EBDCC91AEFCDE5005EABEF /* Products */,
 				B336D24C107235B00692E160 /* Pods */,
 				551EA01E9720C5522C87F7D6 /* Frameworks */,
@@ -397,8 +425,18 @@
 			isa = PBXGroup;
 			children = (
 				70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */,
+				70ECD4FC1BF8F219001FA9A0 /* LZAlbumTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		70ECD4FD1BF8F219001FA9A0 /* LZAlbumTests */ = {
+			isa = PBXGroup;
+			children = (
+				70ECD4FE1BF8F219001FA9A0 /* LZAlbumTests.m */,
+				70ECD5001BF8F219001FA9A0 /* Info.plist */,
+			);
+			path = LZAlbumTests;
 			sourceTree = "<group>";
 		};
 		B336D24C107235B00692E160 /* Pods */ = {
@@ -406,6 +444,8 @@
 			children = (
 				8F9D5B0AB9E7AADF7534422E /* Pods-LZAlbum.debug.xcconfig */,
 				1FD9C10FE9DC0910ADAD3503 /* Pods-LZAlbum.release.xcconfig */,
+				E6F67FF55403DFA9AFE57EA2 /* Pods-LZAlbumTests.debug.xcconfig */,
+				727065AD2258B3498066EF44 /* Pods-LZAlbumTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -422,6 +462,7 @@
 				70EBDCC51AEFCDE5005EABEF /* Frameworks */,
 				70EBDCC61AEFCDE5005EABEF /* Resources */,
 				E391A03B53B8398E63C9B999 /* Copy Pods Resources */,
+				4AA419AC0E3D640A2DF799C8 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,6 +472,27 @@
 			productName = MCAlbum;
 			productReference = 70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */;
 			productType = "com.apple.product-type.application";
+		};
+		70ECD4FB1BF8F219001FA9A0 /* LZAlbumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70ECD5051BF8F219001FA9A0 /* Build configuration list for PBXNativeTarget "LZAlbumTests" */;
+			buildPhases = (
+				81824FC377540E5186EABFDF /* Check Pods Manifest.lock */,
+				70ECD4F81BF8F219001FA9A0 /* Sources */,
+				70ECD4F91BF8F219001FA9A0 /* Frameworks */,
+				70ECD4FA1BF8F219001FA9A0 /* Resources */,
+				8F4350E8DA9546E05602CD51 /* Embed Pods Frameworks */,
+				F72DEB330A5C075161779C26 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70ECD5021BF8F219001FA9A0 /* PBXTargetDependency */,
+			);
+			name = LZAlbumTests;
+			productName = LZAlbumTests;
+			productReference = 70ECD4FC1BF8F219001FA9A0 /* LZAlbumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -443,6 +505,10 @@
 				TargetAttributes = {
 					70EBDCC71AEFCDE5005EABEF = {
 						CreatedOnToolsVersion = 6.3;
+					};
+					70ECD4FB1BF8F219001FA9A0 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 70EBDCC71AEFCDE5005EABEF;
 					};
 				};
 			};
@@ -460,6 +526,7 @@
 			projectRoot = "";
 			targets = (
 				70EBDCC71AEFCDE5005EABEF /* LZAlbum */,
+				70ECD4FB1BF8F219001FA9A0 /* LZAlbumTests */,
 			);
 		};
 /* End PBXProject section */
@@ -492,9 +559,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70ECD4FA1BF8F219001FA9A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4AA419AC0E3D640A2DF799C8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		79C764D18B8F6A8C9B8D0667 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,6 +599,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		81824FC377540E5186EABFDF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4350E8DA9546E05602CD51 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZAlbumTests/Pods-LZAlbumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E391A03B53B8398E63C9B999 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +642,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZAlbum/Pods-LZAlbum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F72DEB330A5C075161779C26 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZAlbumTests/Pods-LZAlbumTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -567,7 +701,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70ECD4F81BF8F219001FA9A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70ECD4FF1BF8F219001FA9A0 /* LZAlbumTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70ECD5021BF8F219001FA9A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70EBDCC71AEFCDE5005EABEF /* LZAlbum */;
+			targetProxy = 70ECD5011BF8F219001FA9A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		700C084B1AF008D000A14D93 /* LaunchScreen.xib */ = {
@@ -685,6 +835,36 @@
 			};
 			name = Release;
 		};
+		70ECD5031BF8F219001FA9A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F67FF55403DFA9AFE57EA2 /* Pods-LZAlbumTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = LZAlbumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lzwjava.LZAlbumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZAlbum.app/LZAlbum";
+			};
+			name = Debug;
+		};
+		70ECD5041BF8F219001FA9A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727065AD2258B3498066EF44 /* Pods-LZAlbumTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LZAlbumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lzwjava.LZAlbumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZAlbum.app/LZAlbum";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -702,6 +882,15 @@
 			buildConfigurations = (
 				70EBDCEC1AEFCDE5005EABEF /* Debug */,
 				70EBDCED1AEFCDE5005EABEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70ECD5051BF8F219001FA9A0 /* Build configuration list for PBXNativeTarget "LZAlbumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70ECD5031BF8F219001FA9A0 /* Debug */,
+				70ECD5041BF8F219001FA9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
