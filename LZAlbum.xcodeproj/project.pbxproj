@@ -54,11 +54,13 @@
 		700C08CC1AF008D000A14D93 /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C08981AF008D000A14D93 /* XHViewState.m */; };
 		700C08CD1AF008D000A14D93 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089A1AF008D000A14D93 /* XHZoomingImageView.m */; };
 		700C08CE1AF008D000A14D93 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */; };
+		70BAF8791C1F5E7B00E629F5 /* LZBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BAF8781C1F5E7B00E629F5 /* LZBaseTest.m */; };
 		70BEDBDD1B33F0E1004A1D39 /* AVUser+MCCustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD71B33F0E1004A1D39 /* AVUser+MCCustomUser.m */; };
 		70BEDBDE1B33F0E1004A1D39 /* LCAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBD91B33F0E1004A1D39 /* LCAlbum.m */; };
 		70BEDBDF1B33F0E1004A1D39 /* LZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDBDC1B33F0E1004A1D39 /* LZComment.m */; };
 		70E6FC251BE7488400F4CA8E /* LZInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6FC231BE7488400F4CA8E /* LZInputAccessoryView.m */; };
-		70ECD4FF1BF8F219001FA9A0 /* LZAlbumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ECD4FE1BF8F219001FA9A0 /* LZAlbumTests.m */; };
+		70ECD4FF1BF8F219001FA9A0 /* LZAlbumTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ECD4FE1BF8F219001FA9A0 /* LZAlbumTest.m */; };
+		70F89E211C26E773003576F6 /* LZAlbumManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F89E201C26E773003576F6 /* LZAlbumManagerTest.m */; };
 		70FD92621B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */; };
 		70FD92651B91BE32003ECB1A /* LZAlbumComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92641B91BE32003ECB1A /* LZAlbumComment.m */; };
 		9532639B6F0F86AE2B7203FB /* libPods-LZAlbumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06F9AF5208389492A04461 /* libPods-LZAlbumTests.a */; };
@@ -150,6 +152,8 @@
 		700C089A1AF008D000A14D93 /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
 		700C089C1AF008D000A14D93 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
 		700C089D1AF008D000A14D93 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
+		70BAF8771C1F5E7B00E629F5 /* LZBaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseTest.h; sourceTree = "<group>"; };
+		70BAF8781C1F5E7B00E629F5 /* LZBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseTest.m; sourceTree = "<group>"; };
 		70BEDBD61B33F0E1004A1D39 /* AVUser+MCCustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUser+MCCustomUser.h"; sourceTree = "<group>"; };
 		70BEDBD71B33F0E1004A1D39 /* AVUser+MCCustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUser+MCCustomUser.m"; sourceTree = "<group>"; };
 		70BEDBD81B33F0E1004A1D39 /* LCAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCAlbum.h; sourceTree = "<group>"; };
@@ -161,8 +165,9 @@
 		70E6FC241BE7488400F4CA8E /* LZInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZInputAccessoryView.h; sourceTree = "<group>"; };
 		70EBDCC81AEFCDE5005EABEF /* LZAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70ECD4FC1BF8F219001FA9A0 /* LZAlbumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZAlbumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70ECD4FE1BF8F219001FA9A0 /* LZAlbumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZAlbumTests.m; sourceTree = "<group>"; };
+		70ECD4FE1BF8F219001FA9A0 /* LZAlbumTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZAlbumTest.m; sourceTree = "<group>"; };
 		70ECD5001BF8F219001FA9A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F89E201C26E773003576F6 /* LZAlbumManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumManagerTest.m; sourceTree = "<group>"; };
 		70FD92601B91B47C003ECB1A /* LZAlbumCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumCommentTableViewCell.h; sourceTree = "<group>"; };
 		70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAlbumCommentTableViewCell.m; sourceTree = "<group>"; };
 		70FD92631B91BE32003ECB1A /* LZAlbumComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAlbumComment.h; sourceTree = "<group>"; };
@@ -433,7 +438,10 @@
 		70ECD4FD1BF8F219001FA9A0 /* LZAlbumTests */ = {
 			isa = PBXGroup;
 			children = (
-				70ECD4FE1BF8F219001FA9A0 /* LZAlbumTests.m */,
+				70BAF8771C1F5E7B00E629F5 /* LZBaseTest.h */,
+				70BAF8781C1F5E7B00E629F5 /* LZBaseTest.m */,
+				70ECD4FE1BF8F219001FA9A0 /* LZAlbumTest.m */,
+				70F89E201C26E773003576F6 /* LZAlbumManagerTest.m */,
 				70ECD5001BF8F219001FA9A0 /* Info.plist */,
 			);
 			path = LZAlbumTests;
@@ -705,7 +713,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70ECD4FF1BF8F219001FA9A0 /* LZAlbumTests.m in Sources */,
+				70BAF8791C1F5E7B00E629F5 /* LZBaseTest.m in Sources */,
+				70F89E211C26E773003576F6 /* LZAlbumManagerTest.m in Sources */,
+				70ECD4FF1BF8F219001FA9A0 /* LZAlbumTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
