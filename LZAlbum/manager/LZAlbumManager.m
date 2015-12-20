@@ -33,7 +33,7 @@
     return self;
 }
 
-- (void)createAlbumWithText:(NSString *)text photos:(NSArray *)photos error:(NSError**)error {
+- (void)createAlbumWithText:(NSString *)text photos:(NSArray *)photos error:(NSError **)error {
     if (text == nil) {
         text = @"";
     }

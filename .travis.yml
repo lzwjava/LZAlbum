@@ -1,0 +1,3 @@
+language: objective-c
+xcode_workspace: LZAlbum.xcworkspace
+xcode_scheme: LZAlbum

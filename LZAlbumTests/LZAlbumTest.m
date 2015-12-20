@@ -8,6 +8,7 @@
 
 #import "LZBaseTest.h"
 #import "LZAlbumManager.h"
+#import "LZAlbum.h"
 
 @interface LZAlbumTest : LZBaseTest
 
@@ -27,6 +28,26 @@
     [[LZAlbumManager manager] findAlbumWithBlock:^(NSArray *objects, NSError *error) {
         assertNil(error);
         assertTrue(objects.count > 0);
+        NOTIFY
+    }];
+    WAIT
+}
+
+- (void)testCreateAlbum {
+    NSError *error;
+    [[LZAlbumManager manager] createAlbumWithText:@"hi" photos:@[] error:&error];
+    assertNil(error);
+}
+
+- (void)testCreateAndFindAlbum {
+    NSError *error;
+    [[LZAlbumManager manager] createAlbumWithText:@"Hi!!!" photos:@[] error:&error];
+    assertNil(error);
+    [[LZAlbumManager manager] findAlbumWithBlock:^(NSArray *objects, NSError *error) {
+        assertNil(error);
+        assertTrue(objects.count > 0);
+        LCAlbum *album = objects[0];
+        assertEqualObjects(album.albumContent, @"Hi!!!");
         NOTIFY
     }];
     WAIT

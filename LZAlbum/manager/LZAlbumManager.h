@@ -11,17 +11,17 @@
 
 @interface LZAlbumManager : NSObject
 
-+(LZAlbumManager*)manager;
++ (LZAlbumManager *)manager;
 
--(void)createAlbumWithText:(NSString*)text photos:(NSArray*)photos error:(NSError**)error;
+- (void)createAlbumWithText:(NSString*)text photos:(NSArray*)photos error:(NSError**)error;
 
 -(void)findAlbumWithBlock:(AVArrayResultBlock)block;
 
 - (void)addUserToCache:(AVUser *)user;
 
--(void)commentToUser:(AVUser*)toUser AtAlbum:(LCAlbum*)album content:(NSString*)content block:(AVBooleanResultBlock)block;
+-(void)commentToUser:(AVUser *)toUser AtAlbum:(LCAlbum*)album content:(NSString*)content block:(AVBooleanResultBlock)block;
 
--(void)digOrCancelDigOfAlbum:(LCAlbum*)album block:(AVBooleanResultBlock)block;
+-(void)digOrCancelDigOfAlbum:(LCAlbum *)album block:(AVBooleanResultBlock)block;
 
 - (void)deleteUnusedFiles;
 
