@@ -33,24 +33,26 @@
     WAIT
 }
 
-- (void)testCreateAlbum {
-    NSError *error;
-    [[LZAlbumManager manager] createAlbumWithText:@"hi" photos:@[] error:&error];
-    assertNil(error);
-}
+// 因为以下测试会污染线上数据，先注释了
 
-- (void)testCreateAndFindAlbum {
-    NSError *error;
-    [[LZAlbumManager manager] createAlbumWithText:@"Hi!!!" photos:@[] error:&error];
-    assertNil(error);
-    [[LZAlbumManager manager] findAlbumWithBlock:^(NSArray *objects, NSError *error) {
-        assertNil(error);
-        assertTrue(objects.count > 0);
-        LCAlbum *album = objects[0];
-        assertEqualObjects(album.albumContent, @"Hi!!!");
-        NOTIFY
-    }];
-    WAIT
-}
+//- (void)testCreateAlbum {
+//    NSError *error;
+//    [[LZAlbumManager manager] createAlbumWithText:@"hi everyone!!!!" photos:@[] error:&error];
+//    assertNil(error);
+//}
+//
+//- (void)testCreateAndFindAlbum {
+//    NSError *error;
+//    [[LZAlbumManager manager] createAlbumWithText:@"Hi!!!" photos:@[] error:&error];
+//    assertNil(error);
+//    [[LZAlbumManager manager] findAlbumWithBlock:^(NSArray *objects, NSError *error) {
+//        assertNil(error);
+//        assertTrue(objects.count > 0);
+//        LCAlbum *album = objects[0];
+//        assertEqualObjects(album.albumContent, @"Hi!!!");
+//        NOTIFY
+//    }];
+//    WAIT
+//}
 
 @end
