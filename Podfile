@@ -11,5 +11,5 @@ target 'LZAlbum' do
 end
 
 target 'LZAlbumTests' do
-    pod 'AVOSCloud', '3.1.6.2'
+    pod 'AVOSCloud', '~> 3.1.6.2'
 end
