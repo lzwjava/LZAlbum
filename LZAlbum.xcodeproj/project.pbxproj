@@ -63,7 +63,7 @@
 		70F89E211C26E773003576F6 /* LZAlbumManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F89E201C26E773003576F6 /* LZAlbumManagerTest.m */; };
 		70FD92621B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92611B91B47C003ECB1A /* LZAlbumCommentTableViewCell.m */; };
 		70FD92651B91BE32003ECB1A /* LZAlbumComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FD92641B91BE32003ECB1A /* LZAlbumComment.m */; };
-		9532639B6F0F86AE2B7203FB /* libPods-LZAlbumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06F9AF5208389492A04461 /* libPods-LZAlbumTests.a */; };
+		DABCF9A24D3EFFBB2802E8EE /* libPods-LZAlbumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06F9AF5208389492A04461 /* libPods-LZAlbumTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,7 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9532639B6F0F86AE2B7203FB /* libPods-LZAlbumTests.a in Frameworks */,
+				DABCF9A24D3EFFBB2802E8EE /* libPods-LZAlbumTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
