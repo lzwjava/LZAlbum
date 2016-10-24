@@ -107,11 +107,13 @@ typedef void (^AVUserHandleBlock)(AVUser *user);
             block(digUser);
         }
         for (LZComment *comment in album.comments) {
-            if (comment.commentUser) {
-                block(comment.commentUser);
-            }
-            if (comment.toUser) {
-                block(comment.toUser);
+            if (comment != nil && ![comment isEqual:[NSNull null]]) {
+                if (comment.commentUser) {
+                    block(comment.commentUser);
+                }
+                if (comment.toUser) {
+                    block(comment.toUser);
+                }
             }
         }
     }

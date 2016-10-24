@@ -91,11 +91,13 @@
     album.albumShareLikes=digNames;
     NSMutableArray* albumComments=[NSMutableArray array];
     for(LZComment* comment in lcAlbum.comments){
-        LZAlbumComment* albumComment=[[LZAlbumComment alloc] init];
-        albumComment.fromUsername = comment.commentUser.username;
-        albumComment.toUsername = comment.toUser.username;
-        albumComment.commentContent=comment.commentContent;
-        [albumComments addObject:albumComment];
+        if (comment != nil && ![comment isEqual:[NSNull null]]) {
+            LZAlbumComment* albumComment=[[LZAlbumComment alloc] init];
+            albumComment.fromUsername = comment.commentUser.username;
+            albumComment.toUsername = comment.toUser.username;
+            albumComment.commentContent=comment.commentContent;
+            [albumComments addObject:albumComment];
+        }
     }
     album.albumShareComments=albumComments;
     album.albumShareTimestamp=lcAlbum.createdAt;
