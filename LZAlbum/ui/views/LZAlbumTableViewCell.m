@@ -7,11 +7,11 @@
 //
 
 #import "LZAlbumTableViewCell.h"
-#import "LZAlbumRichTextView.h"
+
 
 @interface LZAlbumTableViewCell ()<LZAlbumRichTextViewDelegate>
 
-@property (nonatomic,strong) LZAlbumRichTextView* albumRichTextView;
+
 
 @end
 
@@ -30,6 +30,7 @@
         _albumRichTextView=[[LZAlbumRichTextView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 40)];
         _albumRichTextView.richTextViewDelegate=self;
     }
+    _albumRichTextView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     return _albumRichTextView;
 }
 

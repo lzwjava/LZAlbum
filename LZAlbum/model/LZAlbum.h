@@ -33,6 +33,10 @@ static const CGFloat kLZAlbumFontSize=15;
 
 @end
 
+//dhmark - CellModel
+
+#define k
+
 @interface LZAlbum : NSObject
 
 @property (nonatomic,copy) NSString* username;
@@ -49,6 +53,11 @@ static const CGFloat kLZAlbumFontSize=15;
 
 @property (nonatomic,copy) NSDate* albumShareTimestamp;
 
+@property (nonatomic,strong) NSMutableDictionary *drawingContext;
+@property (nonatomic,assign) CGFloat rowHeight;
+@property (nonatomic,assign) CGFloat contentHeight;
+@property (nonatomic,assign) CGFloat collectionHeight;
+@property (nonatomic,assign) CGFloat commentsHeight;
 + (CGFloat)contentWidth;
 
 @end

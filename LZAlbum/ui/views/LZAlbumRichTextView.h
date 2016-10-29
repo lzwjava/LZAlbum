@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LZAlbum.h"
 #import "LZAlbumLikesCommentsView.h"
+#import "AsyncView.h"
 
 static const CGFloat kLZAlbumUsernameHeight=18.0f;
 static const CGFloat kLZAlbumContentLineSpacing=4.0f;
@@ -31,5 +32,7 @@ static const CGFloat kLZAlbumCommentButtonHeight=25.0f;
 
 +(CGFloat)calculateRichTextHeightWithAlbum:(LZAlbum*)album;
 
-
++(CGFloat)getLabelHeightWithText:(NSString*)text maxWidth:(CGFloat)maxWidth font:(NSFont*)font;
++(CGFloat)getContentLabelHeightWithAlbum:(LZAlbum *)album;
++(CGFloat)getPhotoCollectionViewHeightWithAlbum:(LZAlbum *)album;
 @end

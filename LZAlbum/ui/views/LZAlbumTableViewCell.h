@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LZAlbum.h"
-
+#import "LZAlbumRichTextView.h"
 @protocol LZAlbumTableViewCellDelegate <NSObject>
 
 @optional
@@ -26,7 +26,7 @@
 @property (nonatomic,strong) NSIndexPath* indexPath;
 
 @property (nonatomic,strong) id<LZAlbumTableViewCellDelegate> albumTableViewCellDelegate;
-
+@property (nonatomic,strong) LZAlbumRichTextView* albumRichTextView;
 +(CGFloat)calculateCellHeightWithAlbum:(LZAlbum*)album;
 
 @end

@@ -7,9 +7,9 @@
 //
 
 #import "LZBaseTC.h"
-
+#import "FPSObject.h"
 @interface LZAlbumVC : LZBaseTC
-
+@property (nonatomic,strong)FPSObject *fps;
 -(void)refresh;
 
 @end
