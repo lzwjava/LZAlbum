@@ -211,6 +211,11 @@ static NSString* photoCollectionViewIdentifier=@"photoCell";
     return self;
 }
 
+- (void)resetSubviewRects
+{
+    
+}
+
 -(void)layoutSubviews{
     [super layoutSubviews];
     

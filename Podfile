@@ -8,8 +8,6 @@ target 'LZAlbum' do
     pod 'DateTools', '1.5.0'
     pod 'FXForms', '1.2.13'
     pod 'TTTAttributedLabel', '1.13.4'
+    pod 'JDStatusBarNotification'
 end
 
-target 'LZAlbumTests' do
-    pod 'AVOSCloud', '~> 3.1.6.2'
-end

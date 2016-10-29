@@ -29,6 +29,14 @@
 
 @implementation LZAlbum
 
+-(NSDictionary *)drawingContext
+{
+    if (!_drawingContext) {
+        _drawingContext = [[NSMutableDictionary alloc]initWithCapacity:2];
+    }
+    return _drawingContext;
+}
+
 + (CGFloat)contentWidth {
     return CGRectGetWidth([[UIScreen mainScreen] bounds])-3*kLZAlbumAvatarSpacing-kLZAlbumAvatarImageSize;
 }

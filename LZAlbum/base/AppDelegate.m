@@ -11,7 +11,7 @@
 #import "LZComment.h"
 #import "LZEntryFormController.h"
 #import "LZAlbumVC.h"
-
+#import "FPSObject.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +19,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     [LCAlbum registerSubclass];
     [LZComment registerSubclass];
     [AVOSCloud setApplicationId:@"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e" clientKey:@"j9de7xoza1gbvkbp0b6qudz10s9lkwsxqll2nvwrjfty3a58"];
@@ -46,6 +47,7 @@
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     [self toNextController];
+    
     return YES;
 }
 

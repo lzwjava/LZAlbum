@@ -15,6 +15,9 @@
 #import "LZAlbumManager.h"
 #import "AVUser+MCCustomUser.h"
 #import <SDWebImage/UIButton+WebCache.h>
+#import "AsyncRichTextView.h"
+
+#define ShowNew
 
 @interface LZAlbumVC ()<LZAlbumTableViewCellDelegate,MCAlbumOperationViewDelegate,MCAlbumReplyViewDelegate>
 
@@ -45,13 +48,16 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"album_add_photo"] style:UIBarButtonItemStylePlain target:self action:@selector(onAddAlbumButtonClicked)];
     self.tableView.tableHeaderView=self.albumHeaderPathCover;
     [[LZAlbumManager manager] addUserToCache:[AVUser currentUser]];
+    _fps = [[FPSObject alloc]init];
     [self refresh];
 }
 
 -(void)refresh{
+    
     DLog(@"refresh");
     [self showNetworkIndicator];
     WEAKSELF
+    //dhmark - LoadData
     [[LZAlbumManager manager] findAlbumWithBlock:^(NSArray *lcAlbums, NSError *error) {
         [weakSelf hideNetworkIndicator];
         [weakSelf.albumHeaderPathCover stopRefresh];
@@ -67,7 +73,7 @@
         }
     }];
 }
-
+//dhmark - model factory
 -(LZAlbum*)showAlbumFromLCAlbum:(LCAlbum*)lcAlbum{
     LZAlbum* album=[[LZAlbum alloc] init];
     album.username=lcAlbum.creator.username;
@@ -101,6 +107,13 @@
     }
     album.albumShareComments=albumComments;
     album.albumShareTimestamp=lcAlbum.createdAt;
+    
+    album.rowHeight = [LZAlbumTableViewCell calculateCellHeightWithAlbum:album];
+    album.contentHeight = [LZAlbumRichTextView getContentLabelHeightWithAlbum:album];
+    album.collectionHeight = [LZAlbumRichTextView getPhotoCollectionViewHeightWithAlbum:album];
+    album.commentsHeight = [LZAlbumLikesCommentsView caculateLikesCommentsViewHeightWithAlbum:album];
+    //只和数据相关的必要计算，在网络加载时就计算好。
+    
     return album;
 }
 
@@ -225,7 +238,20 @@
 
 #pragma mark - tableview delegate
 
+
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+#ifdef ShowNew
+        LZAlbum *album = self.dataSource[indexPath.row];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"test"];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]init];
+        }
+    
+        AsyncRichTextView *textview = [[AsyncRichTextView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, album.rowHeight) Album:album];
+        [cell.contentView addSubview:textview];
+        return cell;
+#else
     static NSString* cellIdentifer=@"albumTableViewCellIdentifier";
     LZAlbumTableViewCell* albumTableViewCell= [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
     if(albumTableViewCell==nil){
@@ -235,10 +261,19 @@
     albumTableViewCell.indexPath=indexPath;
     albumTableViewCell.currentAlbum=self.dataSource[indexPath.row];
     return albumTableViewCell;
+#endif
+
+
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+#ifdef ShowNew
+    return [self.dataSource[indexPath.row] rowHeight];
+#else
     return [LZAlbumTableViewCell calculateCellHeightWithAlbum:self.dataSource[indexPath.row]];
+#endif
+
+    
 }
 
 #pragma mark - Cell Delegate

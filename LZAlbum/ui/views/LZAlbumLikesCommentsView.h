@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LZAlbum.h"
+#import "AsyncView.h"
 
 static CGFloat kLZAlbumCommentCellUsernameWidth=22;
 static CGFloat kLZAlbumCommentIconHeight = 16;
@@ -18,7 +19,7 @@ static CGFloat kLZAlbumCommentIconHeight = 16;
 
 @end
 
-@interface LZAlbumLikesCommentsView : UIView
+@interface LZAlbumLikesCommentsView : AsyncView
 
 @property (nonatomic,strong) id<MCAlbumLikesCommentsViewDelegate> albumLikesCommentsViewDelegate;
 
